@@ -12,7 +12,7 @@ Joseph Black
 Hayden Chapman     
 Miranda Kirtley    
 Yechan Kweon    
-Alyssa Mesinere    	
+Alyssa Mesinere    
 Matthew Naugle    
 Avery Ryan    
 Preston Summers    
