@@ -1,5 +1,6 @@
 import React from "react";
- 
+import { Link } from "react-router-dom";
+
 function AccountCreation () {
     return (
         <div>
@@ -17,8 +18,8 @@ function AccountCreation () {
 
                 <label for="text">Confirm Password</label>
                 <input type="password" name="passwordConf" id="passwordConf" /> <br />
-
-                <button type="submit">Create</button>
+                
+                <Link to="/login"><button>Create</button></Link> 
             </div>
 
 
