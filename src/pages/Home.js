@@ -3,6 +3,7 @@ import "../Homepage/styles.css";
 import React, {useState} from "react";
 
 
+
 const Home = () => {
     return (
         <div>
@@ -18,7 +19,10 @@ const Home = () => {
                     <h1>Welcome</h1>
 
                     {/*Login Button */}
-                    <Link to="/login"><button>Login</button></Link>  
+                    <Link to="/login"><button>Login</button></Link> 
+                    <Link to="/profilepage"><button>Edit Profile</button></Link>
+                    <Link to="#"><button>Logout</button></Link>
+                
                 </nav>
                 <div className="search-container">
                 <input
@@ -30,10 +34,8 @@ const Home = () => {
                 </div>
                 <p2> Search Results </p2>
                 <div id="searchResults" />
+               
             </div>
-
-
-      
         </div>
     );
 };

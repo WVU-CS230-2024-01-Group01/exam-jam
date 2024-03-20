@@ -10,11 +10,7 @@ import AccountCreation from "./pages/AccountCreation";
 import ReactDOM from "react-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import React from "react";
-
-
-
-
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
@@ -24,6 +20,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/accountcreation" element={<AccountCreation />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/ProfilePage" element={<ProfilePage />} />
           <Route exact path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
