@@ -23,6 +23,11 @@
     width: 50vw;
  }
 
+ #searchResultsText{
+     margin: 20px;
+     visibility: hidden;
+ }
+
  .hero{
    width: 100%;
    min-height:100vh;

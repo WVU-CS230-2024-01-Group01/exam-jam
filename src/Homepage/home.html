@@ -19,7 +19,7 @@
             <div class="sub-menu-wrap" id="subMenu">
                 <div class="sub-menu">
                     <div class="user-info">
-                        <img src="#" >
+                        <img src="#">
                         <h3> Username</h3>
                     </div>
                     <hr>
@@ -37,11 +37,18 @@
         </nav>
 
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Plese enter a class name">
+            <input type="text" id="searchInput" placeholder="Please enter a class name">
             <button id="searchButton">Search</button>
         </div>
-        <p2> Search Results </p2>
+        <p2 id="searchResultsText"> Search Results </p2>
         <div id="searchResults"></div>
+
+        <div id="classBox"> <!-- box model containing placeholders for class cards -->
+            <span>*class card here*</span>
+            <span>*class card here*</span>
+            <span>*class card here*</span>
+        </div>
+
     </div>
 
     <!--Transforms profile menu to show up on click-->
