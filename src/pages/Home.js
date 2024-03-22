@@ -32,6 +32,12 @@ const Home = () => {
                 <div id="searchResults" />
             </div>
 
+            <div id="classBox"> 
+            <span>*class card here*</span>
+            <span>*class card here*</span>
+            <span>*class card here*</span>
+            </div>
+
 
       
         </div>
