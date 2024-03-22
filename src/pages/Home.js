@@ -24,12 +24,18 @@ const Home = () => {
                 <input
                     type="text"
                     id="searchInput"
-                    placeholder="Plese enter a class name"
+                    placeholder="Please enter a class name"
                 />
                 <button id="searchButton">Search</button>
                 </div>
                 <p2> Search Results </p2>
                 <div id="searchResults" />
+            </div>
+
+            <div id="classBox"> 
+            <span>*class card here*</span>
+            <span>*class card here*</span>
+            <span>*class card here*</span>
             </div>
 
 
