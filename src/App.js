@@ -6,11 +6,13 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import AccountCreation from "./pages/AccountCreation";
 import ReactDOM from "react-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import React from "react";
+import VerifyEmail from "./pages/VerifyEmail";
+import CreateAccount from './pages/AccountCreation';
+
 
 
 
@@ -22,8 +24,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/accountcreation" element={<AccountCreation />} />
+          <Route exact path="/accountcreation" element={<CreateAccount />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/verifyemail" element={<VerifyEmail />} />
           <Route exact path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

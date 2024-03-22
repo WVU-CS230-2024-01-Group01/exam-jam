@@ -8,14 +8,11 @@ function Login () {
 
             <div class="Login">
 
-                <label for="username">Enter A Username</label>
+                <label for="username">Enter Username</label>
                 <input type="text" name="username" id="username" /> <br />
 
-                <label for="text">Enter A Password</label>
+                <label for="text">Enter Password</label>
                 <input type="password" name="password" id="password" /> <br />
-
-                <label for="text">Confirm Password</label>
-                <input type="password" name="passwordConf" id="passwordConf" /> <br />
 
                 <Link to="/home"><button type="submit">Login</button></Link> 
                 <Link to="/accountcreation"><button type="submit">Create an account</button></Link>
