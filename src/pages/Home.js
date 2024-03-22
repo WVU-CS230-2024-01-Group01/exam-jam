@@ -24,7 +24,7 @@ const Home = () => {
                 <input
                     type="text"
                     id="searchInput"
-                    placeholder="Plese enter a class name"
+                    placeholder="Please enter a class name"
                 />
                 <button id="searchButton">Search</button>
                 </div>
