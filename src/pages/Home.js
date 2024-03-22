@@ -26,7 +26,7 @@ const Home = () => {
                 <input
                     type="text"
                     id="searchInput"
-                    placeholder="Plese enter a class name"
+                    placeholder="Please enter a class name"
                 />
                 <button id="searchButton">Search</button>
                 </div>
@@ -34,6 +34,18 @@ const Home = () => {
                 <div id="searchResults" />
                
             </div>
+<<<<<<< HEAD
+=======
+
+            <div id="classBox"> 
+            <span>*class card here*</span>
+            <span>*class card here*</span>
+            <span>*class card here*</span>
+            </div>
+
+
+      
+>>>>>>> 0cede597d49c07c6964ee0e8023cf3bc964fc1b8
         </div>
     );
 };

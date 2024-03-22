@@ -6,18 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
     searchButton.addEventListener("click", function() {
         const userInput = searchInput.value.trim();
  
-        if (userInput === "") {
-            alert("Please enter a valid search term.");
-            return;
-        }
- 
         // Simulate checking account type
-      //  const isProfessor = confirm("Are you a professor?");
- 
-        // Simulate searching class list
-        const searchResultsData = searchClassList(userInput);
- 
-        displaySearchResults(searchResultsData);
+        // const isProfessor = confirm("Are you a professor?");
+
+        if (userInput !== "") { //only display search results if the user entered a valid search term
+            // Simulate searching class list
+            const searchResultsData = searchClassList(userInput);
+            document.getElementById("classesBox").style.display = "none"; //stops displaying class box
+            document.getElementById("searchResultsText").style.visibility = "visible"; //renders the "Search results" text visible
+            displaySearchResults(searchResultsData);
+        }
     });
  
     function searchClassList(query) {
