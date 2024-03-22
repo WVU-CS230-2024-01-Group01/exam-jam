@@ -1,6 +1,7 @@
-import React from 'react';
+import "../pages/ProfilePage.css";
 
-export default function ProfilePage() {
+
+export default function ProfilePage({ useProfilePic = true }) {
   return (
     <section style={{ backgroundColor: '#eee' }}>
       <div className="container py-5">
@@ -8,8 +9,6 @@ export default function ProfilePage() {
           <div className="col">
             <nav className="bg-light rounded-3 p-3 mb-4">
               <a href="./pages/Home" className="breadcrumb-item">Home</a>
-              <a href="#" className="breadcrumb-item">User</a>
-              <span className="breadcrumb-item active">User Profile</span>
             </nav>
           </div>
         </div>
@@ -17,8 +16,8 @@ export default function ProfilePage() {
         <div className="row">
           <div className="col-lg-4">
             <div className="card mb-4">
-              <div className="card-body text-center">
-                <img
+            <div className="card-body text-center">
+            <img
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                   alt="avatar"
                   className="rounded-circle"
@@ -29,34 +28,8 @@ export default function ProfilePage() {
                 </div>
               </div>
             </div>
-
-            <div className="card">
-              <div className="card-body">
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i className="fas fa-globe fa-lg text-warning"></i>
-                    <span>https://mdbootstrap.com</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i className="fab fa-github fa-lg" style={{ color: '#333333' }}></i>
-                    <span>mdbootstrap</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i className="fab fa-twitter fa-lg" style={{ color: '#55acee' }}></i>
-                    <span>@mdbootstrap</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i className="fab fa-instagram fa-lg" style={{ color: '#ac2bac' }}></i>
-                    <span>mdbootstrap</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center p-3">
-                    <i className="fab fa-facebook fa-lg" style={{ color: '#3b5998' }}></i>
-                    <span>mdbootstrap</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
+
 
           <div className="col-lg-8">
             <div className="card mb-4">
@@ -66,7 +39,7 @@ export default function ProfilePage() {
                   <p className="card-text">Full Name</p>
                   </div>
                   <div className="col-sm-9">
-                    <p className="card-text text-muted">Name</p>
+                    <p className="card-text text-muted">Username</p>
                   </div>
                 </div>
                 <hr />
@@ -88,14 +61,6 @@ export default function ProfilePage() {
                   </div>
                 </div>
                 <hr />
-                <div className="row">
-                  <div className="col-sm-3">
-                    <p className="card-text">Mobile</p>
-                  </div>
-                  <div className="col-sm-9">
-                    <p className="card-text text-muted">(***) ***-****</p>
-                  </div>
-                </div>
                 <hr />
                 <div className="row">
                   <div className="col-sm-3">
@@ -108,25 +73,22 @@ export default function ProfilePage() {
               </div>
             </div>
 
-            <div className="row">
-              <div className="col-md-6">
-                <div className="card mb-4">
-                  <div className="card-body">
-                    <p className="card-text mb-4"><span className="text-primary font-italic me-1">saved</span> Study Sets</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6">
-                <div className="card mb-4">
-                  <div className="card-body">
-                    <p className="card-text mb-4"><span className="text-primary font-italic me-1">created</span> Study Sets</p>
-                  </div>
-                </div>
-              </div>
+          <div class="container">
+            <div class="card text-white bg-primary mb-3">
+             <div class="card-body">
+              <h5 class="card-title">Saved Study Sets </h5>
+              <p class="card-text">Favorited study sets will go here.</p>
             </div>
           </div>
-        </div>
+          </div>
+          </div>
+            <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+            <h5 class="card-title">Created Study Sets</h5>
+               <p class="card-text">Created study sets will go here.</p>
+              </div>
+           </div>
+           </div>
     </section>
   );
 }

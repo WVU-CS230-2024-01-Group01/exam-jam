@@ -18,10 +18,8 @@ const Home = () => {
                     <h2 className="logo">ExamJam</h2>
                     <h1>Welcome</h1>
 
-                    {/*Login Button */}
-                    <Link to="/login"><button>Login</button></Link> 
                     <Link to="/profilepage"><button>Edit Profile</button></Link>
-                    <Link to="#"><button>Logout</button></Link>
+                    <Link to="/login"><button>Logout</button></Link>
                 
                 </nav>
                 <div className="search-container">
