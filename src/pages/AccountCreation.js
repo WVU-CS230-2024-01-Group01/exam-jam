@@ -12,6 +12,23 @@ const CreateAccount = () => {
   }
   global.randomNum = 0;
 
+<<<<<<< HEAD
+            <div class="accCreate">
+                <label for="email">Enter a Email</label>
+                <input type="email" name="email" id="email" /> <br />
+
+                <label for="username">Enter a Username</label>
+                <input type="text" name="username" id="username" /> <br />
+
+                <label for="password">Enter a Password</label>
+                <input type="password" name="password" id="password" /> <br />
+
+                <label for="password">Confirm Password</label>
+                <input type="password" name="passwordConf" id="passwordConf" /> <br />
+                
+                <Link to="/login"><button>Create</button></Link> 
+            </div>
+=======
   const navigate = useNavigate();
 
   function generateRandomNumber() {
@@ -28,6 +45,7 @@ const CreateAccount = () => {
     templateParams.username = inputUser;
     templateParams.user_email = inputEmail;
     templateParams.code = global.randomNum;
+>>>>>>> 0cede597d49c07c6964ee0e8023cf3bc964fc1b8
 
     emailjs
       .send('service_oefue9b', 'template_mk9ed49', templateParams , {
