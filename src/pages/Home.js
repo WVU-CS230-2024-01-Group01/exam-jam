@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Homepage/styles.css";
+import "../Outdated Homepage/styles.css";
 import React, {useState} from "react";
 
 
@@ -37,9 +37,9 @@ const Home = () => {
             </div>
 
             <div id="classBox"> 
-            <span>*class card here*</span>
-            <span>*class card here*</span>
-            <span>*class card here*</span>
+                <span>*class card here*</span>
+                <span>*class card here*</span>
+                <span>*class card here*</span>
             </div>
 
 
