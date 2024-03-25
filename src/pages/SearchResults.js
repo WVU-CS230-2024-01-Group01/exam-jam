@@ -1,0 +1,1 @@
+//This file will serve as the React implementation of the search results page. The standard HTML version can be found in Results.html in the Homepage folder :)

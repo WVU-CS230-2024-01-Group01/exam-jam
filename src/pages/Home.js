@@ -33,9 +33,9 @@ const Home = () => {
             </div>
 
             <div id="classBox"> 
-            <span>*class card here*</span>
-            <span>*class card here*</span>
-            <span>*class card here*</span>
+                <span>*class card here*</span>
+                <span>*class card here*</span>
+                <span>*class card here*</span>
             </div>
 
 
