@@ -9,18 +9,9 @@ import {
 import ReactDOM from "react-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-<<<<<<< HEAD
+import AccountCreation from "./pages/AccountCreation";
 import ProfilePage from "./pages/ProfilePage";
-=======
-import React from "react";
-import VerifyEmail from "./pages/VerifyEmail";
-import CreateAccount from './pages/AccountCreation';
-
-
-
-
-
->>>>>>> 0cede597d49c07c6964ee0e8023cf3bc964fc1b8
+import Logout from "./pages/Logout"
 
 function App() {
   return (
@@ -28,13 +19,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/accountcreation" element={<CreateAccount />} />
+          <Route exact path="/accountcreation" element={<AccountCreation />} />
           <Route exact path="/login" element={<Login />} />
-<<<<<<< HEAD
           <Route exact path="/ProfilePage" element={<ProfilePage />} />
-=======
-          <Route exact path="/verifyemail" element={<VerifyEmail />} />
->>>>>>> 0cede597d49c07c6964ee0e8023cf3bc964fc1b8
+          <Route eact path="/logout" element={<Logout />} />
           <Route exact path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
