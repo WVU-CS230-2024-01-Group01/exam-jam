@@ -41,22 +41,29 @@ const CreateAccount = () => {
 
   return (
     <div>
-      <h1> Create Your Account</h1>
-      <form>
-        <label>Username</label>
-        <input type="text" name="username" onChange={(e) => setInputUser(e.target.value)} /><br></br>
-
-        <label>Email</label>
-        <input type="email" name="user_email" onChange={(e) => setInputEmail(e.target.value)} /><br></br>
-
-        <label>Enter A Password</label>
-        <input type="password" name="password" id="password" /> <br />
-
-        <label>Confirm Password</label>
-        <input type="password" name="passwordConf" id="passwordConf" /> <br />
-
-        <input type="submit" value="Send Verification Email" onClick={sendEmail} />
-      </form>
+      <div class="Login">
+        <div class="form-box">
+          <h1>ExamJam</h1>
+          <h2> Create Your Account</h2>
+          <form>
+            <div class="info">
+              <input type="text" placeholder="Enter Username" name="username" onChange={(e) => setInputUser(e.target.value)} /><br></br>
+            </div>
+            <div class="info">
+              <input type="password" placeholder="Enter Password" name="password" id="password" /> <br />
+            </div>
+            <div class="info">
+              <input type="password" placeholder="Confirm Password" name="passwordConf" id="passwordConf" /> <br />
+            </div>
+            <div class="info">
+              <input type="email" placeholder="Enter Email"name="user_email" onChange={(e) => setInputEmail(e.target.value)} /><br></br>
+            </div>
+            <div class="buttons">
+              <button type="submit" onClick={sendEmail}>Verify Email</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

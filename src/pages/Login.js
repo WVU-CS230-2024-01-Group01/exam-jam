@@ -11,21 +11,18 @@ function Login () {
                 <h2>Login</h2>
                 <form>
                     <div class="info">
-                        <label for="username">Enter A Username</label>
-                        <input type="text" name="username" id="username" /> <br />
+                        <input type="text" placeholder="Enter Username" name="username" id="username" /> <br />
                     </div>
                     <div class="info">
-                        <label for="text">Enter A Password</label>
-                        <input type="password" name="password" id="password" /> <br />
+                        <input type="password" placeholder="Enter Password" name="password" id="password" /> <br />
                     </div>
                     <div class="info">
-                        <label for="text">Confirm Password</label>
-                        <input type="password" name="passwordConf" id="passwordConf" /> <br />
+                        <input type="password" placeholder="Confirm Password" name="passwordConf" id="passwordConf" /> <br />
                     </div>
 
                     <div class="buttons">
                         <Link to="/home"><button type="submit">Login</button></Link> 
-                        <Link to="/accountcreation"><button type="submit">Create an account</button></Link>
+                        <Link to="/accountcreation"><button type="submit">Create an Account</button></Link>
                     </div>
                 </form>
                 </div>
