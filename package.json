@@ -4,17 +4,13 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-router-dom": "^6.22.3",
-    "react-scripts": "^5.0.1",
-=======
     "react-router-dom": "^6.22.2",
->>>>>>> 0cede597d49c07c6964ee0e8023cf3bc964fc1b8
     "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
