@@ -23,10 +23,14 @@
     width: 50vw;
  }
 
- #searchResultsText{
-     margin: 20px;
-     visibility: hidden;
- }
+#classesBox {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 25px 20px;
+    justify-content: center;
+    background: linear-gradient(to right, lightblue, white);
+    height: 65vh;
+}
 
  .hero{
    width: 100%;
@@ -49,6 +53,10 @@
  .logo{
    width: 120px;
  }
+
+.searchResultsText {
+    margin: 20px;
+}
 
  .user-pic{
    cursor:pointer;

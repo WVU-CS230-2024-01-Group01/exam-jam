@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Homepage/styles.css";
+import "../Outdated Homepage/styles.css";
 import React, {useState} from "react";
 
 
@@ -22,8 +22,8 @@ const Home = () => {
                     <Link to="/profilepage"><button>Edit Profile</button></Link>
                     <Link to="/studysets"><button>Study Sets</button></Link>
                     <Link to="/logout"><button>Logout</button></Link>
-                
-                </nav>
+                   
+                    </nav>
                 <div className="search-container">
                 <input
                     type="text"
@@ -38,9 +38,9 @@ const Home = () => {
             </div>
 
             <div id="classBox"> 
-            <span>*class card here*</span>
-            <span>*class card here*</span>
-            <span>*class card here*</span>
+                <span>*class card here*</span>
+                <span>*class card here*</span>
+                <span>*class card here*</span>
             </div>
 
 

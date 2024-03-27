@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const CreateAccount = () => {
   const [inputUser, setInputUser] = useState("");
   const [inputEmail, setInputEmail] = useState("");
-
   const navigate = useNavigate();
 
   function generateRandomNumber() {
@@ -40,29 +40,35 @@ const CreateAccount = () => {
   };
 
   return (
-    <div>
-      <div class="Login">
-        <div class="form-box">
-          <h1>ExamJam</h1>
-          <h2> Create Your Account</h2>
-          <form>
-            <div class="info">
-              <input type="text" placeholder="Enter Username" name="username" onChange={(e) => setInputUser(e.target.value)} /><br></br>
-            </div>
-            <div class="info">
-              <input type="password" placeholder="Enter Password" name="password" id="password" /> <br />
-            </div>
-            <div class="info">
-              <input type="password" placeholder="Confirm Password" name="passwordConf" id="passwordConf" /> <br />
-            </div>
-            <div class="info">
-              <input type="email" placeholder="Enter Email"name="user_email" onChange={(e) => setInputEmail(e.target.value)} /><br></br>
-            </div>
-            <div class="buttons">
-              <button type="submit" onClick={sendEmail}>Verify Email</button>
-            </div>
-          </form>
-        </div>
+    <div class="Login">
+      <div class="form-box">
+        <h1>Create Your Account</h1>
+        <form id="verifyForm">
+          <div class="info">
+            <label>Enter Username</label>
+            <input type="text" name="username" onChange={(e) => setInputUser(e.target.value)}/><br></br>
+          </div>
+          
+          <div class="info">
+            <label>Enter Email</label>
+            <input type="email" name="user_email" onChange={(e) => setInputEmail(e.target.value)}/><br></br>
+          </div>
+  
+          <div class="info">
+            <label>Enter A Password</label>
+            <input type="password" name="password" id="password" /> <br />
+          </div>
+  
+          <div class="info">
+            <label>Confirm Password</label>
+            <input type="password" name="passwordConf" id="passwordConf" /> <br />
+          </div>
+  
+          <div class="buttons">
+            <input type="submit" value="Send Verification Email" onClick={sendEmail} />
+            <Link to="/login"><button>Go Back</button></Link>
+          </div>
+        </form>
       </div>
     </div>
   );
