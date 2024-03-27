@@ -11,7 +11,11 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import AccountCreation from "./pages/AccountCreation";
 import ProfilePage from "./pages/ProfilePage";
-import Logout from "./pages/Logout"
+import Logout from "./pages/Logout";
+import StudySets from "./pages/StudySets"
+import CreateStudySets from "./pages/CreateStudySets"
+import EditStudySets from "./pages/EditStudySets"
+
 
 function App() {
   return (
@@ -22,6 +26,9 @@ function App() {
           <Route exact path="/accountcreation" element={<AccountCreation />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/ProfilePage" element={<ProfilePage />} />
+          <Route exact path="/studysets" element={<StudySets />} />
+          <Route exact path="/createstudysets" element={<CreateStudySets />} />
+          <Route exact path="/editstudysets" element={<EditStudySets />} />
           <Route eact path="/logout" element={<Logout />} />
           <Route exact path="*" element={<Navigate to="/" />} />
         </Routes>
