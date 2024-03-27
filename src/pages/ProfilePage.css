@@ -2,15 +2,30 @@
     background-color: #eee;
   }
   
+  .hero{
+    width: 100%;
+    min-height:100vh;
+    background: #eceaff;
+    color:#807c7c;
+  }
+  
   .faded-text {
     color: rgba(255, 255, 255, 0.5); /* Faded text color */
   }
   
   .card {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(250, 244, 244, 0.8);
     width: 100%; /* Card width set to 100% */
   }
   
+  .card-container .card {
+    font-family: inherit; /* Matches the font of the parent container */
+  }
+  
+  .card-container .card .card-body {
+    font-family: inherit; /* Matches the font of the parent container */
+  }
+
   .card.mb-4 {
     margin-bottom: 20px;
   }
@@ -20,10 +35,11 @@
   }
   
   .card-title {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
   
   .card-text {
+    font-weight: normal;
     font-size: 1rem;
   }
   
@@ -36,15 +52,15 @@
   }
   
   .text-primary {
-    color: #007bff;
+    color: #c1cfde;
   }
   
   .bg-primary {
-    background-color: #007bff !important;
+    background-color: #dde3eb !important;
   }
   
   .text-white {
-    color: #fff;
+    color: #030000;
   }
 
  /* ProfilePage.css */

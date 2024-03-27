@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Homepage/styles.css";
+import "../Outdated Homepage/styles.css";
 import React, {useState} from "react";
 import SearchBar from "../components/Searchbar";
 
@@ -22,8 +22,8 @@ const Home = () => {
                     <Link to="/login"><button>Login</button></Link>
                     <Link to="/profilepage"><button>Edit Profile</button></Link>
                     <Link to="/logout"><button>Logout</button></Link>
-                
-                </nav>
+                   
+                    </nav>
                 <div className="search-container">
                 <SearchBar />
                 </div>
@@ -33,9 +33,9 @@ const Home = () => {
             </div>
 
             <div id="classBox"> 
-            <span>*class card here*</span>
-            <span>*class card here*</span>
-            <span>*class card here*</span>
+                <span>*class card here*</span>
+                <span>*class card here*</span>
+                <span>*class card here*</span>
             </div>
 
 
