@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../Homepage/styles.css";
 import React, {useState} from "react";
+import SearchBar from "../components/Searchbar";
 
 
 
@@ -24,12 +25,7 @@ const Home = () => {
                 
                 </nav>
                 <div className="search-container">
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Please enter a class name"
-                />
-                <button id="searchButton">Search</button>
+                <SearchBar />
                 </div>
                 <p2> Search Results </p2>
                 <div id="searchResults" />
