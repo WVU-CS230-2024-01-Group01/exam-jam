@@ -1,48 +1,42 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Link, useNavigate } from "react-router-dom";
-import ProfilePage from './ProfilePage';
+import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const CreateAccount = () => {
   const [inputUser, setInputUser] = useState("");
   const [inputEmail, setInputEmail] = useState("");
-  var templateParams = {
-    username: '',
-    user_email: '',
-    code: '',
-  }
-  global.randomNum = 0;
   const navigate = useNavigate();
 
   function generateRandomNumber() {
     const min = 1000;
     const max = 9999;
     return Math.floor(Math.random() * (max - min + 1)) + min;
-
   }
 
   const sendEmail = (e) => {
     e.preventDefault();
-     
-    global.randomNum = String(generateRandomNumber());
-    templateParams.username = inputUser;
-    templateParams.user_email = inputEmail;
-    templateParams.code = global.randomNum;
+
+    const randomNum = String(generateRandomNumber());
+
+    const templateParams = {
+      username: inputUser,
+      user_email: inputEmail,
+      code: randomNum,
+    };
 
     emailjs
-      .send('service_oefue9b', 'template_mk9ed49', templateParams , {
+      .send('service_oefue9b', 'template_mk9ed49', templateParams, {
         publicKey: 'RuQiTX_6jm9UlWhKw',
       })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-      navigate("/verifyemail");
-      //document.getElementById("verifyForm").reset();
+      .then(() => {
+        console.log('SUCCESS!');
+        // Navigate to ProfilePage with username and email as query parameters
+        navigate(`/profile?username=${inputUser}&email=${inputEmail}`);
+      })
+      .catch((error) => {
+        console.log('FAILED...', error.text);
+      });
   };
 
   return (

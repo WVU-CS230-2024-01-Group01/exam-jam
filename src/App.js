@@ -9,15 +9,9 @@ import {
 import ReactDOM from "react-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import React from "react";
-import VerifyEmail from "./pages/VerifyEmail";
-import CreateAccount from './pages/AccountCreation';
-import ProfilePage from './pages/ProfilePage';
-
-
-
-
-
+import AccountCreation from "./pages/AccountCreation";
+import ProfilePage from "./pages/ProfilePage";
+import Logout from "./pages/Logout"
 
 function App() {
   return (
@@ -25,10 +19,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/accountcreation" element={<CreateAccount />} />
+          <Route exact path="/accountcreation" element={<AccountCreation />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/ProfilePage" element={<ProfilePage />} />
-          <Route exact path="/verifyemail" element={<VerifyEmail />} />
+          <Route eact path="/logout" element={<Logout />} />
           <Route exact path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
