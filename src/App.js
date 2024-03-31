@@ -12,14 +12,6 @@ import Login from "./pages/Login";
 import AccountCreation from "./pages/AccountCreation";
 import ProfilePage from "./pages/ProfilePage";
 import Logout from "./pages/Logout"
-import { initializeApp } from 'firebase/app';
-
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
-  //...
-};
-
-const app = initializeApp(firebaseConfig);
 
 
 function App() {
