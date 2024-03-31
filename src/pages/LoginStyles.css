@@ -67,7 +67,7 @@
 }
 
 .Login .form-box .buttons button{
-    width:150px;
+    width:140px;
     background: steelblue;
     color: #fff;
     height: 40px;
@@ -76,3 +76,15 @@
     outline: 0;
     cursor: pointer;
 }
+
+/*Send email style */
+input[type="submit"] {
+    background-color: steelblue; 
+    color: white; 
+    padding: 10px 20px; 
+    height: 40px;
+    border-radius: 20px;
+    border:0;
+    outline: 0;
+    cursor: pointer; 
+  }

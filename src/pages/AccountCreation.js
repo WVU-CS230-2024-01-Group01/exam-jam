@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import PasswordChecklist from "react-password-checklist";
 import validator from "validator";
+import { Link } from 'react-router-dom';
 
 const CreateAccount = () => {
   const [inputUser, setInputUser] = useState("");
@@ -58,24 +59,35 @@ const CreateAccount = () => {
   };
 
   return (
-    <div>
-      <h1> Create Your Account</h1>
-      <form>
-        <label>Username</label>
-        <input type="text" name="username" onChange={(e) => setInputUser(e.target.value)} /><br></br>
+    <div class="Login">
+      <div class="form-box">
+        <h1>Create Your Account</h1>
+        <form id="verifyForm">
+          <div class="info">
+            <label>Enter Username</label>
+            <input type="text" name="username" onChange={(e) => setInputUser(e.target.value)}/><br></br>
+          </div>
+          
+          <div class="info">
+          <label>Enter Email</label>
+          <input type="email" name="user_email" onChange={(e) =>validateEmail(e)} /><br></br>
+            <div style={{whiteSpace: 'break-spaces'}}>
+              {emailMessage}
+            </div>
+          </div>
+  
+          <div class="info">
+            <label>Enter A Password</label>
+            <input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/> <br />
+          </div>
+  
+          <div class="info">
+            <label>Confirm Password</label>
+            <input type="password" name="passwordConf" id="passwordConf" value={matchPassword} onChange={(e) => setMatchPassword(e.target.value)}/> <br />
+          </div>
 
-        <label>Email</label>
-        <input type="email" name="user_email" onChange={(e) =>validateEmail(e)} /><br></br>
-        <div style={{whiteSpace: 'break-spaces'}}>
-          {emailMessage}
-        </div>
-        
-        <label>Enter A Password</label>
-        <input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/> <br />
-
-        <label>Confirm Password</label>
-        <input type="password" name="passwordConf" id="passwordConf" value={matchPassword} onChange={(e) => setMatchPassword(e.target.value)}/> <br />
-        <div>
+          <div class="passwordauth">
+          <div>
           <PasswordChecklist 
             rules = {["capital", "match", "number", "minLength"]}
             minLength = {8}
@@ -89,9 +101,14 @@ const CreateAccount = () => {
             }}
             />
           </div>
-
-        <input type="submit" value="Send Verification Email" onClick={sendEmail} />
-      </form>
+          </div>
+  
+          <div class="buttons">
+            <input type="submit" value="Send Verification Email" onClick={sendEmail} />
+            <Link to="/login"><button>Go Back</button></Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
