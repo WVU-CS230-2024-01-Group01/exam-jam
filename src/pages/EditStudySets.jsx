@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const EditStudySets = () =>{
     const [studyset,setStudySet]= useState({
@@ -19,7 +19,7 @@ const EditStudySets = () =>{
     const handleClick=async e=>{
         e.preventDefault()
         try{
-            await axios.put("http://localhost:3306/studysets/"+setId, studyset)
+            await axios.put("http://localhost:8800/studysets/"+setId, studyset)
             navigate("/studysets")
         }catch(err){
             console.log(err)
@@ -32,6 +32,7 @@ const EditStudySets = () =>{
             <h1>Edit Study Set</h1>
             <input type="text" placeholder="Title" onChange={handleChange} name="title"/>
             <button className="formButton" onClick={handleClick}>Confirm</button>
+            <button className="formButton"><Link to={`/studysets`}>Go Back</Link></button>
         </div>
     )
 }

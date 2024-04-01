@@ -8,7 +8,7 @@ const StudySets = () =>{
     useEffect(()=>{
         const fetchAllStudySets = async ()=>{
             try{
-                const res = await axios.get("http://localhost:3306/studysets")
+                const res = await axios.get("http://localhost:8800/studysets")
                 setStudySets(res.data)
             }catch(err){
                 console.log(err)
@@ -19,7 +19,7 @@ const StudySets = () =>{
 
     const handleDelete = async (id) =>{
         try{
-            await axios.delete("http://localhost:3306/studysets/"+id)
+            await axios.delete("http://localhost:8800/studysets/"+id)
             window.location.reload()
         }catch(err){
             console.log(err)
@@ -38,6 +38,9 @@ const StudySets = () =>{
         </div>
         <button>
             <Link to="/createstudysets">Create Study Set</Link>
+        </button>
+        <button>
+            <Link to="/" className="btn btn-primary">Homepage</Link>
         </button>
     </div>
     )

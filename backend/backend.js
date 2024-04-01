@@ -5,10 +5,10 @@ import cors from "cors"
 const app = express()
 
 const db = mysql.createConnection({
-    host : "sql5.freemysqlhosting.net",
-    user: "sql5693537",
-    password: "mi9rmgaWt6",
-    database: "sql5693537"
+    host : "localhost",
+    user: "root",
+    password: "",
+    database: "examjam"
 })
 
 app.use(express.json())
@@ -57,6 +57,6 @@ app.put("/studysets/:id", (req,res)=>{
     })
 })
 
-app.listen(3306, ()=>{
+app.listen(8800, ()=>{
     console.log("Connected to backend!")
 })

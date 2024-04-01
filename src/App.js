@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/ProfilePage" element={<ProfilePage />} />
           <Route exact path="/studysets" element={<StudySets />} />
           <Route exact path="/createstudysets" element={<CreateStudySets />} />
-          <Route exact path="/editstudysets" element={<EditStudySets />} />
+          <Route exact path="/editstudysets/:id" element={<EditStudySets />} />
           <Route eact path="/logout" element={<Logout />} />
           <Route exact path="*" element={<Navigate to="/" />} />
         </Routes>
