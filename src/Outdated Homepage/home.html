@@ -4,43 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Search Bar</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <title> Search Bar</title>
+    <link rel="stylesheet" href="Homepage.css">
 </head>
 <body>
     <div class="hero">
         <nav>
-            <h2 class="logo">ExamJam</h2>
-            <h1>Welcome</h1>
-            <button id="profileButton" class="user-pic" onclick="toggleMenu()">Username</button>
+            <img src="#" class="logo">
+            <h1> Welcome</h1>
+            <button id="profileButton" class="user-pic"> Username</button>
 
-            <div class="sub-menu-wrap" id="subMenu">
+
+            <div class="sub-menu-wrap">
                 <div class="sub-menu">
                     <div class="user-info">
                         <img src="#">
-                        <h3> Username</h3>
+                        <h2> Username</h2>
                     </div>
                     <hr>
 
-                    <!-- Update href attribute here -->
+
                     <a href="#" class="sub-menu-link">
-                        <p>Edit Profile</p>
-                        <span>></span>
+                        <p> Edit Profile</p>
+                        <span> > </span>
                     </a>
                     <a href="#" class="sub-menu-link">
-                        <p>Logout</p>
-                        <span>></span>
+                        <p> Logout</p>
+                        <span> > </span>
                     </a>
                 </div>
             </div>
         </nav>
 
+
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Please enter a class name">
-            <button id="searchButton">Search</button>
+            <button id="searchButton"> Search</button>
         </div>
+        <p2 id="searchResultsText"> Search Results </p2>
+        <div id="searchResults"> </div>
 
         <div id="classesBox">
             <!-- box model containing placeholders for class cards -->
@@ -48,20 +54,12 @@
             <span>*class card here*</span>
             <span>*class card here*</span>
         </div>
-
     </div>
 
-    <!--Transforms profile menu to show up on click-->
-    <script>
-        let subMenu = document.getElementById("subMenu");
-        function toggleMenu() {
-            subMenu.classList.toggle("open-menu");
-        }
-    </script>
-    <script src="script.js"></script>
+    <script src="search.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 </body>
 </html>
+

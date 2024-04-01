@@ -19,17 +19,22 @@
 
  
  #searchResults {
-    margin-top: 24px;
+    margin: 24px 30px;
     width: 50vw;
  }
 
 #classesBox {
     border: 2px solid black;
+    margin: 20px 30px;
     padding: 10px;
-    margin: 25px 20px;
     justify-content: center;
-    background: linear-gradient(to right, lightblue, white);
+    background: linear-gradient(to right, steelblue, white);
     height: 65vh;
+}
+
+#searchResultsText {
+    margin: 30px;
+    display: none;
 }
 
  .hero{
@@ -53,10 +58,6 @@
  .logo{
    width: 120px;
  }
-
-.searchResultsText {
-    margin: 20px;
-}
 
  .user-pic{
    cursor:pointer;
