@@ -1,0 +1,50 @@
+[debug] [2024-04-02T02:18:54.943Z] ----------------------------------------------------------------------
+[debug] [2024-04-02T02:18:54.946Z] Command:       C:\Users\kyech\DOWNLO~1\firebase-tools-instant-win.exe C:\Users\kyech\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase emulators:start
+[debug] [2024-04-02T02:18:54.946Z] CLI Version:   13.6.0
+[debug] [2024-04-02T02:18:54.946Z] Platform:      win32
+[debug] [2024-04-02T02:18:54.947Z] Node Version:  v18.5.0
+[debug] [2024-04-02T02:18:54.947Z] Time:          Mon Apr 01 2024 22:18:54 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-04-02T02:18:54.947Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-02T02:18:55.029Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-02T02:18:55.029Z] > authorizing via signed-in user (examjamofficial@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2024-04-02T02:18:55.046Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-02T02:18:55.046Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-02T02:18:55.047Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project examjam-firebase. This may result in unexpected behavior. 
+[debug] [2024-04-02T02:18:55.054Z] [hub] writing locator at C:\Users\kyech\AppData\Local\Temp\hub-examjam-firebase.json
+[debug] [2024-04-02T02:18:55.081Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/examjam-firebase/sites 
+[debug] [2024-04-02T02:18:55.615Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/examjam-firebase/sites 200
+[debug] [2024-04-02T02:18:55.615Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/examjam-firebase/sites {"sites":[{"name":"projects/examjam-firebase/sites/examjam","defaultUrl":"https://examjam.web.app","appId":"1:353075002536:web:45b6bf30937e6084e7969d","type":"USER_SITE"},{"name":"projects/examjam-firebase/sites/examjam-firebase","defaultUrl":"https://examjam-firebase.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-04-02T02:18:55.616Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase/webApps/-/config [none]
+[debug] [2024-04-02T02:18:56.048Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase/webApps/-/config 200
+[debug] [2024-04-02T02:18:56.048Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase/webApps/-/config {"projectId":"examjam-firebase","databaseURL":"https://examjam-firebase-default-rtdb.firebaseio.com","storageBucket":"examjam-firebase.appspot.com","locationId":"us-east1","apiKey":"AIzaSyDmMgfeYY1AsN6yvt7KW-jfS52iYvcKQhA","authDomain":"examjam-firebase.firebaseapp.com","messagingSenderId":"353075002536"}
+[debug] [2024-04-02T02:18:56.062Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase [none]
+[debug] [2024-04-02T02:18:56.393Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase 200
+[debug] [2024-04-02T02:18:56.393Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase {"projectId":"examjam-firebase","projectNumber":"353075002536","displayName":"examjam-firebase","name":"projects/examjam-firebase","resources":{"hostingSite":"examjam-firebase","realtimeDatabaseInstance":"examjam-firebase-default-rtdb","storageBucket":"examjam-firebase.appspot.com","locationId":"us-east1"},"state":"ACTIVE","etag":"1_c1f2d7cf-f832-4ccf-b656-e85536f4800b"}
+[info] i  hosting[examjam-firebase]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting[examjam-firebase]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ 127.0.0.1:5000 │
+└──────────┴────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] "GET / HTTP/1.1" 200 644 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] \"GET / HTTP/1.1\" 200 644 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\""}}
+[info] i  hosting: 127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] "GET /static/css/main.f5c9bc52.css HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] \"GET /static/css/main.f5c9bc52.css HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\""}}
+[info] i  hosting: 127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] "GET /static/js/main.247a480d.js HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] \"GET /static/js/main.247a480d.js HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\""}}
+[info] i  hosting: 127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] "GET /favicon.ico HTTP/1.1" 200 - "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\""}}
+[info] i  hosting: 127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] "GET /logo192.png HTTP/1.1" 200 5347 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Apr/2024:02:19:12 +0000] \"GET /logo192.png HTTP/1.1\" 200 5347 \"http://127.0.0.1:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\""}}
+[info] i  hosting: 127.0.0.1 - - [02/Apr/2024:02:19:16 +0000] "GET /static/media/loginBG.16fd22e393019f713c24.jpg HTTP/1.1" 200 81767 "http://127.0.0.1:5000/static/css/main.f5c9bc52.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [02/Apr/2024:02:19:16 +0000] \"GET /static/media/loginBG.16fd22e393019f713c24.jpg HTTP/1.1\" 200 81767 \"http://127.0.0.1:5000/static/css/main.f5c9bc52.css\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\""}}
+[debug] [2024-04-02T02:19:27.733Z] Received signal SIGINT (Ctrl-C) 1
