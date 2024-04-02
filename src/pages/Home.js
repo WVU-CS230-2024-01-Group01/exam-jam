@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../Outdated Homepage/styles.css";
-import SearchBar from "../components/Searchbar";
+import SearchBar from "../Components/Searchbar";
 
 
 
