@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "../Outdated Homepage/styles.css";
-import React, {useState} from "react";
 
 
 

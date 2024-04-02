@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter,
@@ -6,7 +5,6 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import ReactDOM from "react-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import AccountCreation from "./pages/AccountCreation";
