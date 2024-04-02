@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../Outdated Homepage/styles.css";
+import SearchBar from "../components/Searchbar";
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
                    
                     </nav>
                 <div className="search-container">
+                <SearchBar />
                 </div>
                 <p2> Search Results </p2>
                 <div id="searchResults" />
