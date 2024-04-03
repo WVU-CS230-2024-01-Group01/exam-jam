@@ -19,22 +19,18 @@
 
  
  #searchResults {
-    margin: 24px 30px;
+    margin-top: 24px;
     width: 50vw;
  }
 
 #classesBox {
     border: 2px solid black;
-    margin: 20px 30px;
+    margin: 20px 50px;
     padding: 10px;
     justify-content: center;
     background: linear-gradient(to right, steelblue, white);
     height: 65vh;
-}
-
-#searchResultsText {
-    margin: 30px;
-    display: none;
+    display: flex;
 }
 
  .hero{
@@ -58,6 +54,11 @@
  .logo{
    width: 120px;
  }
+
+.searchResultsText {
+    margin: 20px;
+    display: none;
+}
 
  .user-pic{
    cursor:pointer;
@@ -133,5 +134,14 @@
  .sub-menu-link:hover p{
    font-weight:600;
  }
+
+.card {
+    color: #2a4e6c;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    width: 30%; 
+    height: 20vh; 
+}
 
 

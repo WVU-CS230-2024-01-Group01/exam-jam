@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function displaySearchResults(results) {
         //Clear previous search results
-        searchResults.innerHTML = "";
+        clearSearchResults();
 
         if (results.length === 0) {
             searchResults.innerHTML = "<p>No results found.</p>";
