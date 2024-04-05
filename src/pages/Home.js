@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import "./styles.css";
-import React, { useState } from "react";
+import "../Outdated Homepage/styles.css";
 import SearchBar from "../Components/Searchbar";
 import Card from "../Components/Card";
-
 
 
 const Home = () => {
