@@ -19,7 +19,7 @@ const CreateAccount = () => {
     setInputEmail(e.target.value);
     
 
-    if (validator.isEmail(email) || email == "") {
+    if (validator.isEmail(email) || email === "") {
       setEmailMessage("");
     } else {
       setEmailMessage('Please, enter valid Email!');

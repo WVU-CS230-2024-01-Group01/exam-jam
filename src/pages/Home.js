@@ -2,10 +2,18 @@ import { Link } from "react-router-dom";
 import "../Outdated Homepage/styles.css";
 import React, {useState} from "react";
 import SearchBar from "../Components/Searchbar";
+import Card from "../Components/Card";
 
 
 
 const Home = () => {
+
+    const classData = [ //for use in cards
+        { title: "CS230", description: "Intro to Software Engineering" },
+        { title: "CS320", description: "Analysis of Algorithms" },
+        { title: "MATH251", description: "Calculus III" }
+    ];
+
     return (
         <div>
             <link
@@ -28,16 +36,22 @@ const Home = () => {
                 <div className="search-container">
                 <SearchBar />
                 </div>
-                <p2> Search Results </p2>
-                <div id="searchResults" />
-               
+
+                <div id="classesBox">
+         
+                    {classData.map((classItem, index) => ( //iterates over each item in classData and passes its information to a Card
+                        <Card className = "card"
+                            key={index} // Providing a unique key for each card
+                            title={classItem.title}
+                            description={classItem.description}
+                        />
+                    ))}
+
+                </div>
+
             </div>
 
-            <div id="classBox"> 
-                <span>*class card here*</span>
-                <span>*class card here*</span>
-                <span>*class card here*</span>
-            </div>
+            
 
 
       

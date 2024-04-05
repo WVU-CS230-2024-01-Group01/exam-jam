@@ -8,7 +8,7 @@ import {
   faMusic, faSun, faComputer, faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 import "../pages/ProfilePage.css";
-import "../Outdated Homepage/styles.css";
+import "./styles.css";
 
 
 const availableIcons = [faUser, faUserCircle, faUserSecret, faUserNinja,
