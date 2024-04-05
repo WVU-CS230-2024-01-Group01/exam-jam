@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../Outdated Homepage/styles.css";
 import React, {useState} from "react";
-import SearchBar from "../components/Searchbar";
+import SearchBar from "../Components/Searchbar";
 
 
 
