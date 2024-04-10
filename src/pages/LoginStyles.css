@@ -77,6 +77,18 @@
     cursor: pointer;
 }
 
+.homepageButton {
+    margin-top: 10px;
+    width:200px;
+    background: steelblue;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border:0;
+    outline: 0;
+    cursor: pointer;
+}
+
 /*Send email style */
 input[type="submit"] {
     background-color: steelblue; 
@@ -87,4 +99,15 @@ input[type="submit"] {
     border:0;
     outline: 0;
     cursor: pointer; 
+  }
+
+  input[type="submit"]:disabled{
+    background-color: grey; 
+    color: white; 
+    padding: 10px 20px; 
+    height: 40px;
+    border-radius: 20px;
+    border:0;
+    outline: 0;
+    cursor: not-allowed; 
   }

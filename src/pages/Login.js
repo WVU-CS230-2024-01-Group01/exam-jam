@@ -1,29 +1,62 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../pages/LoginStyles.css";
+import axios from 'axios'
+import md5 from 'md5'
  
 function Login () {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const [confPassword, setConfPassword] = useState('')
+    const navigate = useNavigate();
+
+    async function handleSubmit(event){
+        event.preventDefault();
+        if (confPassword === password){
+            await axios.post('http://localhost:8081/accounts', {username, password})
+            .then( res => {
+                if (res.data === "Login Successful") {
+                    localStorage.setItem('user', username)
+                    navigate("/")
+                }
+                else if (res.data === "Username or Password incorrect") {
+                    alert("Username or Password incorrect")
+                }
+                console.log(res)
+             } )
+            .catch(err => console.log(err))
+        }
+        else {
+            alert("Passwords do not match")
+        }
+    }
+
     return (
         <div>
             <div class="Login">
                 <div class="form-box">
                 <h1>ExamJam</h1>
                 <h2>Login</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div class="info">
-                        <input type="text" placeholder="Enter Username" name="username" id="username" /> <br />
+                        <label for="username">Enter A Username</label>
+                        <input type="text" name="usernameBox" id="usernameBox" onChange={e => setUsername(e.target.value)}/> <br />
                     </div>
                     <div class="info">
-                        <input type="password" placeholder="Enter Password" name="password" id="password" /> <br />
+                        <label for="password">Enter A Password</label>
+                        <input type="password" name="passwordBox" id="passwordBox" onChange={e => setPassword((md5(e.target.value)))}/> <br />
                     </div>
                     <div class="info">
-                        <input type="password" placeholder="Confirm Password" name="passwordConf" id="passwordConf" /> <br />
+                        <label for="passwordConf">Confirm Password</label>
+                        <input type="password" name="passwordConfBox" id="passwordConfBox" onChange={e => setConfPassword((md5(e.target.value)))}/> <br />
                     </div>
 
                     <div class="buttons">
-                        <Link to="/home"><button type="submit">Login</button></Link> 
-                        <Link to="/accountcreation"><button type="submit">Create an Account</button></Link>
+                        <button type="submit">Login</button>
+                        <Link to="/accountcreation"><button type="submit">Create an account</button></Link>
                     </div>
+                    <Link to="/"><button class="homepageButton">Homepage</button></Link>
+                    
                 </form>
                 </div>
             </div>

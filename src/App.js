@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import AccountCreation from "./pages/AccountCreation";
 import ProfilePage from "./pages/ProfilePage";
 import Logout from "./pages/Logout";
+import VerifyEmail from "./pages/VerifyEmail";;
 import StudySets from "./pages/StudySets"
 import CreateStudySets from "./pages/CreateStudySets"
 import EditStudySets from "./pages/EditStudySets"
@@ -28,7 +29,8 @@ function App() {
           <Route exact path="/studysets" element={<StudySets />} />
           <Route exact path="/createstudysets" element={<CreateStudySets />} />
           <Route exact path="/editstudysets/:id" element={<EditStudySets />} />
-          <Route eact path="/logout" element={<Logout />} />
+          <Route exact path="/logout" element={<Logout />} />
+          <Route exact path="/verifyemail" element={<VerifyEmail />} />
           <Route exact path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
