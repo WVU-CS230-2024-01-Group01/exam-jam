@@ -40,6 +40,7 @@ const Home = () => {
                         <>
                             <Link to="/profilepage"><button>Edit Profile</button></Link>
                             <Link to="/logout"><button onClick={handleLogout}>Logout</button></Link>
+                            <Link to="/studysets"><button>Study Sets</button></Link>
                         </>
                     ) : (
                         <Link to="/login"><button>Login</button></Link>
