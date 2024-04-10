@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import AccountCreation from "./pages/AccountCreation";
 import ProfilePage from "./pages/ProfilePage";
-import Logout from "./pages/Logout"
+import Logout from "./pages/Logout";
 import VerifyEmail from "./pages/VerifyEmail";
 
 
