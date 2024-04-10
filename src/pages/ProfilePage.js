@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useLocation, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap'; // Import React Bootstrap components
 import {
   faUser, faUserCircle, faUserSecret, faUserNinja,
@@ -9,6 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import "../pages/ProfilePage.css";
 import "./styles.css";
+import axios from 'axios';
 
 
 const availableIcons = [faUser, faUserCircle, faUserSecret, faUserNinja,
@@ -17,18 +18,46 @@ const availableIcons = [faUser, faUserCircle, faUserSecret, faUserNinja,
 ];
 
 const ProfilePage = () => {
+    useEffect(()=>{
+        fetchAccount()
+      })
+    
     const [selectedIcon, setSelectedIcon] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
 
-    const location = useLocation();
-    const queryParams = new URLSearchParams(location.search);
-    const username = queryParams.get('Username:');
-    const email = queryParams.get('Email:');
+    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
 
-    const handleIconSelect = (icon) => {
+    const handleIconSelect = (icon, index) => {
         setSelectedIcon(icon);
         setModalOpen(false);
+        updateIcon(index)
     };
+
+    const fetchAccount = async()=> {
+        let username = localStorage.getItem('user')
+        if (username) {
+          try {
+            await axios.post("http://localhost:8081/accounts", {username})
+            .then( res => {
+              setUsername(res.data.username)
+              setEmail(res.data.email)
+              setSelectedIcon(availableIcons[res.data.picture])
+            })
+            .catch(err => console.log(err))
+          } catch (err) {
+            console.log(err)
+          } 
+      }
+    }
+
+    let updateIcon = async(index)=> {
+        await axios.put("http://localhost:8081/accounts", {index, username})
+        .then( res => {
+            console.log(res.data)
+        })
+        .catch(err => console.log(err))
+    }
 
     return (
       <section className="profile-page">
@@ -70,8 +99,8 @@ const ProfilePage = () => {
                           <Card.Body>
                               <p className="card-text text-muted">Username: {username}</p>
                               <hr />
-                              <p className="card-text">Email: {email}</p>
-                              <p className="card-text text-muted">example@example.com</p>
+                              <p className="card-text">Email:</p>
+                              <p className="card-text text-muted">{email}</p>
                           </Card.Body>
                       </Card>
                       <Card className="mb-4">
@@ -120,7 +149,7 @@ const ProfilePage = () => {
                                   icon={icon}
                                   size="2x"
                                   className="icon"
-                                  onClick={() => handleIconSelect(icon)}
+                                  onClick={() => handleIconSelect(icon, index)}
                               />
                           ))}
                       </div>

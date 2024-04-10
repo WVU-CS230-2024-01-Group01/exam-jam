@@ -1,19 +1,37 @@
 import React, {useState} from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
  
 function VerifyEmail () {
-    const [inputCode, setInputCode] = useState("test");
+    const [inputCode, setInputCode] = useState("");
     const navigate = useNavigate();
+    
     const VerifyCode = (e) => {
         e.preventDefault();
-        if(String(global.randomNum) == inputCode){
+        let code = localStorage.getItem('code')
+        console.log(code)
+        if(String(code) === inputCode){
             alert("Successful Verification");
-            navigate("/");
+            addAccount()
+            navigate("/login")
         } else {
             alert("Code is incorrect");
         }
       };
+
+      async function addAccount(){
+        let email = localStorage.getItem('email')
+        let username = localStorage.getItem('username')
+        let password = localStorage.getItem('password')
+        await axios.post('http://localhost:8081/accounts', {email, username, password})
+        .then (
+            localStorage.clear()
+        )
+        .catch (
+            err => console.log(err)
+        )
+      }
     
 
     return (
@@ -24,8 +42,6 @@ function VerifyEmail () {
                 <label>Enter Code</label>
                 <input type='text' name='verifyCode' onChange={(e) => setInputCode(e.target.value)}></input>
                 <input type="submit" value="Verify" onClick={VerifyCode} ></input>
-
-
             </div>
 
 

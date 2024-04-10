@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import AccountCreation from "./pages/AccountCreation";
 import ProfilePage from "./pages/ProfilePage";
 import Logout from "./pages/Logout"
+import VerifyEmail from "./pages/VerifyEmail";
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
           <Route exact path="/accountcreation" element={<AccountCreation />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/ProfilePage" element={<ProfilePage />} />
-          <Route eact path="/logout" element={<Logout />} />
+          <Route exact path="/logout" element={<Logout />} />
+          <Route exact path="/verifyemail" element={<VerifyEmail />} />
           <Route exact path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
