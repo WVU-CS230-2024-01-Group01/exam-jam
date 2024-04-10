@@ -16,7 +16,7 @@ const CreateStudySets = () =>{
     const handleClick=async e=>{
         e.preventDefault()
         try{
-            await axios.post("http://localhost:8800/studysets", studyset)
+            await axios.post("http://localhost:8081/studysets", studyset)
             navigate("/studysets")
         }catch(err){
             console.log(err)

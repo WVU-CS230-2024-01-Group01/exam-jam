@@ -19,7 +19,7 @@ const EditStudySets = () =>{
     const handleClick=async e=>{
         e.preventDefault()
         try{
-            await axios.put("http://localhost:8800/studysets/"+setId, studyset)
+            await axios.put("http://localhost:8081/studysets/"+setId, studyset)
             navigate("/studysets")
         }catch(err){
             console.log(err)
