@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import "../Outdated Homepage/styles.css";
+import "./styles.css";
 import React, {useState} from "react";
 import SearchBar from "../Components/Searchbar";
 import Card from "../Components/Card";
@@ -35,7 +35,8 @@ const Home = () => {
                 <nav>
                     <h2 className="logo">ExamJam</h2>
                     <h1>Welcome {foundUser}</h1>
-
+        
+    
                     {foundUser ? (
                         <>
                             <Link to="/profilepage"><button>Edit Profile</button></Link>
@@ -54,7 +55,7 @@ const Home = () => {
                 <div id="classesBox">
          
                     {classData.map((classItem, index) => ( //iterates over each item in classData and passes its information to a Card
-                        <Card className = "card"
+                        <Card className = "mb-1"
                             key={index} // Providing a unique key for each card
                             title={classItem.title}
                             description={classItem.description}
