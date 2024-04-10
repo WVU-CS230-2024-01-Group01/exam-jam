@@ -10,10 +10,10 @@ import Login from "./pages/Login";
 import AccountCreation from "./pages/AccountCreation";
 import ProfilePage from "./pages/ProfilePage";
 import Logout from "./pages/Logout";
-import VerifyEmail from "./pages/VerifyEmail";;
-import StudySets from "./pages/StudySets"
-import CreateStudySets from "./pages/CreateStudySets"
-import EditStudySets from "./pages/EditStudySets"
+import VerifyEmail from "./pages/VerifyEmail";
+import StudySets from "./pages/StudySets";
+import CreateStudySets from "./pages/CreateStudySets";
+import EditStudySets from "./pages/EditStudySets";
 
 
 

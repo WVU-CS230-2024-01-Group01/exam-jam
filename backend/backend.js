@@ -77,6 +77,49 @@ app.put("/accounts", (req, res) => {
     })
 })
 
+app.get("/", (req,res)=>{
+    res.json("Hello this is the backend")
+})
+
+app.get("/studysets", (req,res)=>{
+    const q = "SELECT * FROM studysets"
+    db.query(q,(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
+app.post("/studysets", (req,res)=>{
+    const q = "INSERT INTO studysets (`title`) VALUES (?)"
+    const values = [req.body.title]
+    db.query(q, [values], (err,data)=>{
+        if(err) return res.json(err)
+        return res.json("Study set has been created")
+    })
+})
+
+app.delete("/studysets/:id", (req,res)=>{
+    const setId = req.params.id
+    const q = "DELETE FROM studysets WHERE id = ?"
+
+    db.query(q,[setId],(err,data)=>{
+        if(err) return res.json(err)
+        return res.json("Study set has been deleted")
+    })
+})
+
+app.put("/studysets/:id", (req,res)=>{
+    const setId = req.params.id
+    const q = "UPDATE studysets SET `title`=? WHERE id = ?"
+
+    const values = [req.body.title]
+
+    db.query(q,[...values,setId],(err,data)=>{
+        if(err) return res.json(err)
+        return res.json("Study set has been updated")
+    })
+})
+
 app.listen(8081, () => {
     console.log("Listening...")
 })
