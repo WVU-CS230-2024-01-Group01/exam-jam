@@ -19,4 +19,4 @@ jobs:
           channelId: live
           projectId: examjam-firebase
         env:
-          CI: ""
+          CI: false

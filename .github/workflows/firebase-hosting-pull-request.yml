@@ -20,4 +20,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_EXAMJAM_FIREBASE }}'
           projectId: examjam-firebase
         env:
-          CI: ""
+          CI: false
