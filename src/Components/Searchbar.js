@@ -7,7 +7,7 @@ const SearchBar = () => {
     const [searchInput, setSearchInput] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const db = getDatabase(app);
-
+    db = getDatabase(app);
     const handleInputChange = (event) => {
         setSearchInput(event.target.value.trim());
     };

@@ -19,3 +19,5 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_EXAMJAM_FIREBASE }}'
           projectId: examjam-firebase
+        env:
+          CI: ""
