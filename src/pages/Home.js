@@ -1,10 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
-import "./styles.css";
-import React, {useState} from "react";
+import { Link } from "react-router-dom";
+import "./Home.css";
 import SearchBar from "../Components/Searchbar";
 import Card from "../Components/Card";
-
-
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
@@ -34,28 +32,21 @@ const Home = () => {
             <div className="hero">
                 <nav>
                     <h2 className="logo">ExamJam</h2>
-                    <h1>Welcome {foundUser}</h1>
-        
-    
-                    {foundUser ? (
-                        <>
-                            <Link to="/profilepage"><button>Edit Profile</button></Link>
-                            <Link to="/logout"><button onClick={handleLogout}>Logout</button></Link>
-                            <Link to="/studysets"><button>Study Sets</button></Link>
-                        </>
-                    ) : (
-                        <Link to="/login"><button>Login</button></Link>
-                    )}
+                    <h1>Welcome</h1>
+
+                    <Link to="/login"><button>Login</button></Link>
+                    <Link to="/profilepage"><button>Edit Profile</button></Link>
+                    <Link to="/logout"><button>Logout</button></Link>
                    
                     </nav>
                 <div className="search-container">
-                    <SearchBar />
+                <SearchBar />
                 </div>
 
                 <div id="classesBox">
          
                     {classData.map((classItem, index) => ( //iterates over each item in classData and passes its information to a Card
-                        <Card className = "mb-1"
+                        <Card className = "card"
                             key={index} // Providing a unique key for each card
                             title={classItem.title}
                             description={classItem.description}

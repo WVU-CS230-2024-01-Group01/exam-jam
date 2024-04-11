@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getDatabase, ref, set, get, child } from "firebase/database";
+import { getDatabase, ref, get, child } from "firebase/database";
 import { app } from "./Firebase.js";
 
 
