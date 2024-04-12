@@ -105,7 +105,7 @@
    border: 0;
    height: 1px;
    width:100%;
-   background: #ccc;
+   background: #cccccc;
    margin: 15px 0 10px;
  }
 
@@ -135,10 +135,10 @@
  }
 
 .card {
-    background-color: blue;
+    color: #2a4e6c;
     margin: 10px;
     padding: 20px;
-    border: 50px solid black;
+    border: 1px solid black;
     width: 30%; 
     height: 20vh; 
 }

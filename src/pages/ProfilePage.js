@@ -7,8 +7,8 @@ import {
   faCat, faDog, faHorse, faOtter, faFrog, faDragon, faHeart,
   faMusic, faSun, faComputer, faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
-import "../pages/ProfilePage.css";
-import "./styles.css";
+import "./ProfilePage.css";
+import "./AccountCreation";
 
 
 const availableIcons = [faUser, faUserCircle, faUserSecret, faUserNinja,
@@ -22,8 +22,8 @@ const ProfilePage = () => {
 
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
-    const username = queryParams.get('Username:');
-    const email = queryParams.get('Email:');
+    const username = queryParams.get('Username');
+    const email = queryParams.get('Email');
 
     const handleIconSelect = (icon) => {
         setSelectedIcon(icon);
