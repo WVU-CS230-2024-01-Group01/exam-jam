@@ -2,10 +2,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import SearchBar from "../Components/Searchbar";
 import Card from "../Components/Card";
-<<<<<<< HEAD
-=======
 import { useNavigate } from "react-router-dom";
->>>>>>> c4d2f2e68be927ff95e0be38f6163fdec6827e6c
 
 const Home = () => {
 

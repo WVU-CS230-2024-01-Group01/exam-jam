@@ -11,14 +11,11 @@ import AccountCreation from "./pages/AccountCreation";
 import ProfilePage from "./pages/ProfilePage";
 import Logout from "./pages/Logout";
 import VerifyEmail from "./pages/VerifyEmail";
-<<<<<<< HEAD
 import Classes from "./pages/Classes";
-=======
 import StudySets from "./pages/StudySets";
 import CreateStudySets from "./pages/CreateStudySets";
 import EditStudySets from "./pages/EditStudySets";
 
->>>>>>> c4d2f2e68be927ff95e0be38f6163fdec6827e6c
 
 
 function App() {
