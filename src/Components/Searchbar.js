@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { getDatabase, ref, set, get, child } from "firebase/database";
+import { getDatabase, ref, get, child } from "firebase/database";
 import { app } from "./Firebase.js";
 
 
 const SearchBar = () => {
     const [searchInput, setSearchInput] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-
 
     const handleInputChange = (event) => {
         setSearchInput(event.target.value.trim());
