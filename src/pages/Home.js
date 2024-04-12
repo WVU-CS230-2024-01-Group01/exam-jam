@@ -3,7 +3,6 @@ import "../Outdated Homepage/styles.css";
 import SearchBar from "../Components/Searchbar";
 import Card from "../Components/Card";
 
-
 const Home = () => {
 
     const classData = [ //for use in cards
