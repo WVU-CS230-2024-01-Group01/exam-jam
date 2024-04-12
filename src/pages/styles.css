@@ -135,12 +135,23 @@
  }
 
 .card {
-    color: #2a4e6c;
+    background-color: blue;
     margin: 10px;
     padding: 20px;
-    border: 1px solid black;
+    border: 50px solid black;
     width: 30%; 
     height: 20vh; 
 }
 
+.card-whipple-blue {
+    background-color: #769eb0;
+}
+
+.card-behr-ice-cave {
+    background-color: #2b677e;
+}
+
+.card-valspar-paint-prairie-dance {
+    background-color: #d9bf7d;
+}
 

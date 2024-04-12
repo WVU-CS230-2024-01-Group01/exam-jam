@@ -32,16 +32,16 @@ const Home = () => {
                     </nav>
                 <div className="search-container">
                 <SearchBar />
-                </div>
+                </div>                  
 
                 <div id="classesBox">
          
                     {classData.map((classItem, index) => ( //iterates over each item in classData and passes its information to a Card
-                        <Card className = "card"
+                        <Card 
+                            
                             key={index} // Providing a unique key for each card
                             title={classItem.title}
-                            description={classItem.description}
-                        />
+                            description={classItem.description}/>
                     ))}
 
                 </div>
