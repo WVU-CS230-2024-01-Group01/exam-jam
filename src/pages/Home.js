@@ -1,11 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Outdated Homepage/styles.css";
-import React, {useState} from "react";
 import SearchBar from "../Components/Searchbar";
-
+import Card from "../Components/Card";
 
 
 const Home = () => {
+
+    let foundUser = localStorage.getItem('user')
+
+    const navigate = useNavigate()
+
+    function handleLogout () {
+        localStorage.clear()
+        navigate('/login')
+    }
+
+    const classData = [ //for use in cards
+        { title: "CS230", description: "Intro to Software Engineering" },
+        { title: "CS320", description: "Analysis of Algorithms" },
+        { title: "MATH251", description: "Calculus III" }
+    ];
+
     return (
         <div>
             <link
@@ -17,26 +32,37 @@ const Home = () => {
             <div className="hero">
                 <nav>
                     <h2 className="logo">ExamJam</h2>
-                    <h1>Welcome</h1>
+                    <h1>Welcome {foundUser}</h1>
 
-                    <Link to="/login"><button>Login</button></Link>
-                    <Link to="/profilepage"><button>Edit Profile</button></Link>
-                    <Link to="/logout"><button>Logout</button></Link>
+                    {foundUser ? (
+                        <>
+                            <Link to="/profilepage"><button>Edit Profile</button></Link>
+                            <Link to="/logout"><button onClick={handleLogout}>Logout</button></Link>
+                        </>
+                    ) : (
+                        <Link to="/login"><button>Login</button></Link>
+                    )}
                    
                     </nav>
                 <div className="search-container">
-                <SearchBar />
+                    <SearchBar />
                 </div>
-                <p2> Search Results </p2>
-                <div id="searchResults" />
-               
+
+                <div id="classesBox">
+         
+                    {classData.map((classItem, index) => ( //iterates over each item in classData and passes its information to a Card
+                        <Card className = "card"
+                            key={index} // Providing a unique key for each card
+                            title={classItem.title}
+                            description={classItem.description}
+                        />
+                    ))}
+
+                </div>
+
             </div>
 
-            <div id="classBox"> 
-                <span>*class card here*</span>
-                <span>*class card here*</span>
-                <span>*class card here*</span>
-            </div>
+            
 
 
       

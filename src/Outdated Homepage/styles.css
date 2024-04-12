@@ -25,11 +25,12 @@
 
 #classesBox {
     border: 2px solid black;
+    margin: 20px 50px;
     padding: 10px;
-    margin: 25px 20px;
     justify-content: center;
-    background: linear-gradient(to right, lightblue, white);
+    background: linear-gradient(to right, steelblue, white);
     height: 65vh;
+    display: flex;
 }
 
  .hero{
@@ -56,6 +57,7 @@
 
 .searchResultsText {
     margin: 20px;
+    display: none;
 }
 
  .user-pic{
@@ -132,5 +134,14 @@
  .sub-menu-link:hover p{
    font-weight:600;
  }
+
+.card {
+    color: #2a4e6c;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    width: 30%; 
+    height: 20vh; 
+}
 
 
