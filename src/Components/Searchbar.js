@@ -9,7 +9,6 @@ const SearchBar = () => {
     const [searchInput, setSearchInput] = useState('');
     const [searchResults, setSearchResults] = useState([]);
 
-
     const handleInputChange = (event) => {
         setSearchInput(event.target.value.trim());
     };

@@ -1,3 +1,7 @@
+/*These styles are for the login page and account creation page
+The styles are shared between the two 
+*/
+
 *{
     margin:0;
     padding: 0;
@@ -60,6 +64,7 @@
     padding: 18px 15px;
 }
 
+/*Button styles */
 .Login .form-box .buttons{
     width:100%;
     display: flex;
@@ -68,6 +73,18 @@
 
 .Login .form-box .buttons button{
     width:140px;
+    background: steelblue;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border:0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.homepageButton {
+    margin-top: 10px;
+    width:200px;
     background: steelblue;
     color: #fff;
     height: 40px;
@@ -87,4 +104,15 @@ input[type="submit"] {
     border:0;
     outline: 0;
     cursor: pointer; 
+  }
+
+  input[type="submit"]:disabled{
+    background-color: grey; 
+    color: white; 
+    padding: 10px 20px; 
+    height: 40px;
+    border-radius: 20px;
+    border:0;
+    outline: 0;
+    cursor: not-allowed; 
   }

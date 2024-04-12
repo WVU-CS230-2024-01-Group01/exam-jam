@@ -18,3 +18,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_EXAMJAM_FIREBASE }}'
           channelId: live
           projectId: examjam-firebase
+        env:
+          CI: false

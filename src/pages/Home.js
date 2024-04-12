@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
-import "../Outdated Homepage/styles.css";
+import "./Home.css";
 import SearchBar from "../Components/Searchbar";
 import Card from "../Components/Card";
+<<<<<<< HEAD
+=======
+import { useNavigate } from "react-router-dom";
+>>>>>>> c4d2f2e68be927ff95e0be38f6163fdec6827e6c
 
 const Home = () => {
+
+    let foundUser = localStorage.getItem('user')
+    foundUser = localStorage.getItem('user');
+    const navigate = useNavigate()
+
+    function handleLogout () {
+        localStorage.clear()
+        navigate('/login')
+    }
 
     const classData = [ //for use in cards
         { title: "CS230", description: "Intro to Software Engineering" },
@@ -26,7 +39,7 @@ const Home = () => {
 
                     <Link to="/login"><button>Login</button></Link>
                     <Link to="/profilepage"><button>Edit Profile</button></Link>
-                    <Link to="/logout"><button>Logout</button></Link>
+                    <Link to="/logout"><button onClick={handleLogout}>Logout</button></Link>
                    
                     </nav>
                 <div className="search-container">

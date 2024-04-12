@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import PasswordChecklist from "react-password-checklist";
 import validator from "validator";
 import { Link } from 'react-router-dom';
+import md5 from 'md5';
 
 const CreateAccount = () => {
   const [inputUser, setInputUser] = useState("");
@@ -11,8 +12,13 @@ const CreateAccount = () => {
   const [password, setPassword] = useState("");
   const [matchPassword, setMatchPassword] = useState("");
   const [emailMessage, setEmailMessage] = useState("");
+  const [passwordValidity, setValidity] = useState(false)
 
   const navigate = useNavigate();
+
+  const handleChangePassword = (isValid, _) => {
+    setValidity(isValid)
+  }
 
   const validateEmail = (e) => {
     const email = e.target.value;
@@ -25,7 +31,6 @@ const CreateAccount = () => {
       setEmailMessage('Please, enter valid Email!');
     }
   };
-
 
   function generateRandomNumber() {
     const min = 1000;
@@ -44,6 +49,8 @@ const CreateAccount = () => {
       code: randomNum,
     };
 
+    let md5Password = md5(password)
+
     emailjs
       .send('service_oefue9b', 'template_mk9ed49', templateParams, {
         publicKey: 'RuQiTX_6jm9UlWhKw',
@@ -51,7 +58,11 @@ const CreateAccount = () => {
       .then(() => {
         console.log('SUCCESS!');
         // Navigate to ProfilePage with username and email as query parameters
-        navigate(`/profile?username=${inputUser}&email=${inputEmail}`);
+        localStorage.setItem('code', randomNum)
+        localStorage.setItem('email', inputEmail)
+        localStorage.setItem('username', inputUser)
+        localStorage.setItem('password', md5Password)
+        navigate("/verifyemail");
       })
       .catch((error) => {
         console.log('FAILED...', error.text);
@@ -89,7 +100,7 @@ const CreateAccount = () => {
           <div class="passwordauth">
           <div>
           <PasswordChecklist 
-            rules = {["capital", "match", "number", "minLength"]}
+            rules = {["capital", "match", "number", "minLength", "notEmpty"]}
             minLength = {8}
             value = {password}
             valueAgain = {matchPassword}
@@ -99,12 +110,13 @@ const CreateAccount = () => {
               match: "The passwords should match",
               number: "The password should contain a number",
             }}
+            onChange = {handleChangePassword}
             />
           </div>
           </div>
   
           <div class="buttons">
-            <input type="submit" value="Send Verification Email" onClick={sendEmail} />
+            <input type="submit" value="Send Verification Email" onClick={sendEmail} disabled={!passwordValidity || (inputUser.length < 5) || !validator.isEmail(inputEmail)}/>
             <Link to="/login"><button>Go Back</button></Link>
           </div>
         </form>
