@@ -53,7 +53,7 @@ const SearchBar = () => {
                 {searchResults.length === 0 ? (
                     <p>No results found.</p>
                 ) : (
-                    searchResults.map(classList => (
+                    searchResults.map(classList => (    
                         <div key={classList.wvuClass}>
                             <p className="list-group-item list-group-item-action">{classList.wvuClass}</p>
                         </div>
