@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { getDatabase, ref, get, child } from "firebase/database";
+import { getDatabase, ref, set, get, child } from "firebase/database";
+import { Link } from 'react-router-dom';
+import Classes from "../pages/Classes.js";
 import { app } from "./Firebase.js";
 
 
@@ -40,6 +42,10 @@ const SearchBar = () => {
         return filtered;
     };
 
+    const handleCallClasses = async (classId) => {
+
+    }
+
     return (
         <div>
             <input
@@ -55,7 +61,7 @@ const SearchBar = () => {
                 ) : (
                     searchResults.map(classList => (    
                         <div key={classList.wvuClass}>
-                            <p className="list-group-item list-group-item-action">{classList.wvuClass}</p>
+                           <p className="list-group-item list-group-item-action"><Link to="/classes"><button id = "classButton" onClick={handleCallClasses}>{classList.wvuClass}</button></Link></p> {/*line author: Avery Ryan*/}
                         </div>
                     ))
                 )}

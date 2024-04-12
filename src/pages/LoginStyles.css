@@ -1,3 +1,7 @@
+/*These styles are for the login page and account creation page
+The styles are shared between the two 
+*/
+
 *{
     margin:0;
     padding: 0;
@@ -60,6 +64,7 @@
     padding: 18px 15px;
 }
 
+/*Button styles */
 .Login .form-box .buttons{
     width:100%;
     display: flex;
