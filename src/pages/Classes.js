@@ -1,47 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import StudySets from './StudySets';
+import "./Classes.css"
 import { getDatabase, ref, set, get, child } from "firebase/database";
-
 
 export const Classes = () => {
 
-  const [classData, setClassData] = useState([]);
-
-  const handleClassData = async (courseID) => {
-
-      let something = [];
-      const dbRef = ref(getDatabase());
-      await get(child(dbRef, `classInfo`)).then((snapshot) => {
-          if (snapshot.exists()) {
-            something = snapshot.val();
-            setClassData(something);
-          } else {
-           console.log("Error: no data found");
-          }
-      }).catch((error) => {
-        console.error(error);
-      });
-    }
-
     return (
-    <div>
-     
-      <h1>ExamJam</h1>
-      <h2>Flashcards</h2>
-      <div id="flashcardDisplay">
-         <button onClick={handleClassData}>Click me</button>
-      {classData.length === 0 ? (
-                    <p>No results found.</p>
-                ) : (
-                 
-                    classData.map(something => (
-                        <div key={something.classData}>
-                          <p>something</p>
-                        </div>
-                    ))
-                )}
-      </div>
-    </div>
-  ); 
+      <div>
+       <link rel="stylesheet" />
+
+         <div className="background">
+         <nav>
+           <h2 className="logo">ExamJam</h2>
+           <h1 className="class-title">Class Title{/** How do I retrieve the class title? */}</h1>
+           
+
+           <Link to="/"><button>Homepage</button></Link>
+           <Link to="/profilepage"><button>Edit Profile</button></Link>
+           <Link to="/logout"><button>Logout</button></Link>
+                   
+        </nav>
+         <div id = "study-sets-container">
+            <StudySets />
+         </div>     
+       </div>
+       </div>
+  );
 
 };
 

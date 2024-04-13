@@ -6,13 +6,13 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
-    let foundUser = localStorage.getItem('user')
+    let foundUser = localStorage.getItem('user');
     foundUser = localStorage.getItem('user');
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     function handleLogout () {
-        localStorage.clear()
-        navigate('/login')
+        localStorage.clear();
+        navigate('/login');
     }
 
     const classData = [ //for use in cards
