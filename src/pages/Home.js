@@ -20,6 +20,7 @@ const Home = () => {
         { title: "CS320", description: "Analysis of Algorithms" },
         { title: "MATH251", description: "Calculus III" }
     ];
+    
 
     return (
         <div>
