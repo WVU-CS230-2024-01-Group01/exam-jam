@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, set, get, child } from "firebase/database";
 import { Link } from 'react-router-dom';
-import Classes from "../pages/Classes.js";
 import { app } from "./Firebase.js";
 
 
