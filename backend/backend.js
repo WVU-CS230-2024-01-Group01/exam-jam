@@ -100,7 +100,7 @@ app.post("/studysets", (req,res)=>{
 
 app.delete("/studysets/:id", (req,res)=>{
     const setId = req.params.id
-    const q = "DELETE FROM studysets WHERE id = ?"
+    const q = "DELETE FROM studysets WHERE ss_id = ?"
 
     db.query(q,[setId],(err,data)=>{
         if(err) return res.json(err)
@@ -108,15 +108,24 @@ app.delete("/studysets/:id", (req,res)=>{
     })
 })
 
-app.put("/studysets/:id", (req,res)=>{
-    const setId = req.params.id
-    const q = "UPDATE studysets SET `title`=? WHERE id = ?"
+app.put("/studysets/:ss_id", (req,res)=>{
+    const setId = req.params.ss_id
+    const q = "UPDATE studysets SET `title`=? WHERE ss_id = ?"
 
     const values = [req.body.title]
 
     db.query(q,[...values,setId],(err,data)=>{
         if(err) return res.json(err)
         return res.json("Study set has been updated")
+    })
+})
+
+app.post("/studycards", (req,res)=>{
+    const q = "INSERT INTO studycards (`ss_id`, `side1`, `side2`) VALUES (?)"
+    const values = [req.body.ss_id, req.body.side1, req.body.side2]
+    db.query(q, [values], (err,data)=>{
+        if(err) return res.json(err)
+        return res.json("Study card has been created")
     })
 })
 
