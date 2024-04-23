@@ -15,6 +15,7 @@ import Classes from "./pages/Classes";
 import StudySets from "./pages/StudySets";
 import CreateStudySets from "./pages/CreateStudySets";
 import EditStudySets from "./pages/EditStudySets";
+import SingleStudySet from './pages/SingleStudySet';
 
 
 
@@ -29,7 +30,8 @@ function App() {
           <Route exact path="/ProfilePage" element={<ProfilePage />} />
           <Route exact path="/studysets" element={<StudySets />} />
           <Route exact path="/createstudysets" element={<CreateStudySets />} />
-          <Route exact path="/editstudysets/:id" element={<EditStudySets />} />
+          <Route exact path="/editstudysets/:ss_id" element={<EditStudySets />} />
+          <Route exact path ="/studysets/:ss_id" element={<SingleStudySet/>}/>
           <Route exact path="/logout" element={<Logout />} />
           <Route exact path="/verifyemail" element={<VerifyEmail />} />
           <Route exact path="*" element={<Navigate to="/" />} />

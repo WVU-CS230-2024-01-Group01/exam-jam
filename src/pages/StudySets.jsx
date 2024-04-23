@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
  * @returns {JSX.Element} StudySets component JSX
  */
 const StudySets = () =>{
-    const [studysets,setStudySets]= useState([])
+    const [studysets,setStudySets]= useState([]);
 
 
     /**
@@ -36,27 +36,28 @@ const StudySets = () =>{
 
     /**
      * Handle deletion of a study set by its ID.
-     * @param id - ID of the study set to delete
+     * @param ss_id - ID of the study set to delete
      */
     const handleDelete = async (ss_id) =>{
         try{
-            await axios.delete("http://localhost:8081/studysets/"+ss_id)
-            window.location.reload()
+            await axios.delete(`http://localhost:8081/studysets/${ss_id}`);
+            setStudySets(studysets.filter(set => set.ss_id !== ss_id));
         }catch(err){
             console.log(err)
         }
     }
 
     return(<div>
-        <div className= "studysets">
-            {studysets.map(studyset=>(
-                <div className="studyset" key={studyset.id}>
-                   <h1>{studyset.title}</h1>
-                   <button className="delete" onClick={()=>handleDelete(studyset.ss_id)}>Delete</button>
-                   <button className="editstudysets"><Link to={`/editstudysets/${studyset.ss_id}`}>Edit</Link></button>
-                </div>
-            ))}
-        </div>
+            <div className= "studysets">
+                {studysets.map(studyset=>(
+                    <div className="studyset" key={studyset.ss_id}>
+                    <Link to={`/studysets/${studyset.ss_id}`} >
+                    <h1>{studyset.title}</h1>
+                    </Link>
+                    <button className="delete" onClick={()=>handleDelete(studyset.ss_id)}>Delete</button>
+                    </div>
+                ))}
+            </div>
         <button>
             <Link to="/createstudysets">Create Study Set</Link>
         </button>

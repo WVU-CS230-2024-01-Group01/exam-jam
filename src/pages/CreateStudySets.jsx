@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CreateStudySets = () =>{
-    const [studyset,setStudySets]= useState({
+    const [studyset,setStudySet]= useState({
         title: ""
     })
 
     const navigate = useNavigate()
 
     const handleChange=(e)=>{
-        setStudySets(prev=>({...prev, [e.target.name]: e.target.value}))
+        setStudySet(prev=>({...prev, [e.target.name]: e.target.value}))
     }
 
     const handleClick=async e=>{
