@@ -1,0 +1,27 @@
+.logo {
+    width: 120px;
+}
+
+nav{
+   background:#27222b;
+   width:100%;
+   padding: 10px 10%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   color: #eceaff;
+ }
+
+.class-title {
+   align-items: left;
+}
+
+.background {
+    background: linear-gradient(to right, steelblue, white);
+}
+
+#study-sets-container{
+   position: relative;
+   width:320px;
+ }

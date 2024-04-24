@@ -2,26 +2,39 @@
 .search-container {
     text-align: center;
     margin-top: 50px;
-}
-
-#searchInput {
+    background-image: url(loginBG.jpg);
+ }
+ 
+ #searchInput {
     padding: 10px;
     width: 300px;
     font-size: 16px;
-}
-
-#searchButton {
+    border-width: 3px;
+    border-color: grey;
+    color: steelblue;
+    background-color: rgb(239, 250, 255);;
+    
+ }
+ 
+ #searchButton {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: steelblue;
-}
+    background-color: white;
+    border-width: 2.5px;
+    color: steelblue;
+    border-color: grey;
+    font-weight: bold; 
+    background-color: rgb(239, 250, 255);
+
+ }
 
 
 #searchResults {
     margin-top: 24px;
     width: 50vw;
-}
+    
+ }
 
 #classesBox {
     border: 2px solid black;
@@ -31,54 +44,68 @@
     background: linear-gradient(to right, steelblue, white);
     height: 65vh;
     display: flex;
+    
 }
 
-.hero {
-    width: 100%;
-    min-height: 100vh;
-    background: #eceaff;
-    color: #807c7c;
-}
+ .hero{
+   width: 100%;
+   min-height:100vh;
+   background-image: url(loginBG.jpg);
+   color:#807c7c;
+   
+ }
 
-nav {
-    background: #27222b;
-    width: 100%;
-    padding: 10px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    color: #eceaff;
-}
+ nav{
+   background:steelblue;
+   width:100%;
+   padding: 10px 10%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+   color: #eceaff;
+   
+ }
 
-.logo {
-    width: 120px;
-}
+ .logo{
+   color: rgb(239, 250, 255);
+   padding-bottom: 50px;
+   padding-top: 10px;
+   font-weight: bold; 
+   font-size: 55px;
+   
+
+ }
 
 .searchResultsText {
     margin: 20px;
+    display: none;
+    
 }
 
-.user-pic {
-    cursor: pointer;
-    margin-left: 30;
-    background-color: steelblue;
-    width: 120px;
-}
+ .user-pic{
+   cursor:pointer;
+   margin-left:30;
+   background-color:steelblue;
+   width: 120px;
+   
+ }
 
-.sub-menu-wrap {
-    position: absolute;
-    top: 100%;
-    right: 10%;
-    width: 320px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s;
-}
+ .sub-menu-wrap{
+   position: absolute;
+   top: 100%;
+   right:10%;
+   width:320px;
+   max-height: 0px;
+   overflow: hidden;
+   transition: max-height 0.5s;
+   
+ }
 
-    .sub-menu-wrap.open-menu {
-        max-height: 400px;
-    }
+ .sub-menu-wrap.open-menu{
+   max-height: 400px;
+   
+ }
 
 .sub-menu {
     background: #fff;
@@ -87,36 +114,39 @@ nav {
     color: #525252;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
-}
+ .user-info{
+   display: flex;
+   align-items: center;
+   
+ }
+ .user-info h3{
+   font-weight: 500;
+ }
 
-    .user-info h3 {
-        font-weight: 500;
-    }
+ .user-info img{
+   width: 60px;
+   border-radius: 50%;
+   margin-right: 15px;
+   
+ }
 
-    .user-info img {
-        width: 60px;
-        border-radius: 50%;
-        margin-right: 15px;
-    }
+ .sub-menu hr{
+   border: 0;
+   height: 1px;
+   width:100%;
+   background: #ccc;
+   margin: 15px 0 10px;
+   
+ }
 
-.sub-menu hr {
-    border: 0;
-    height: 1px;
-    width: 100%;
-    background: #ccc;
-    margin: 15px 0 10px;
-}
-
-.sub-menu-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #525252;
-    margin: 12px 0;
-}
+ .sub-menu-link{
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   color:#525252;
+   margin: 12px 0; 
+   
+ }
 
     .sub-menu-link p {
         width: 100%;
@@ -136,13 +166,42 @@ nav {
     }
 
 .card {
-    background-color: blue;
+    color: steelblue;
     margin: 10px;
     padding: 20px;
     border: 1px solid black;
-    border-radius: 10px;
-    width: 30%;
-    height: 20vh;
+    width: 30%; 
+    height: 20vh; 
+    font-size: 20px;
+    
+    
+}
+
+.welcome {
+
+  color: steelblue;
+  font-weight: bold; 
+  background-color: rgb(239, 250, 255);
+  padding: 6px; 
+  border-radius: 10px; 
+  display: flexbox; 
+  font-size: 33px;
+  
+}
+
+.profileBar {
+ font-weight: bold;
+ border-radius: 11px;
+ margin: 5px;
+ font-size: 15px;
+ border-width: 3.5px;
+ border-color: rgb(183, 173, 173);
+ color: steelblue;
+ text-align: center;
+ padding: 10px;
+ background-color: rgb(239, 250, 255);
+
+
 }
 
 .card-whipple-blue {
@@ -153,6 +212,6 @@ nav {
     background-color: #2b677e;
 }
 
-.card-valspar-paint-prairie-dance {
-    background-color: #d9bf7d;
+.behindClassesBox {
+  background-image: url(loginBG.jpg);
 }
