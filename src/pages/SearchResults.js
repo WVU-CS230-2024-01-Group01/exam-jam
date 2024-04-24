@@ -1,3 +1,4 @@
+
 //Loads and refreshes search results on a new page
 
 import { Link } from "react-router-dom";

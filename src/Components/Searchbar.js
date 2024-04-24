@@ -50,15 +50,27 @@ const SearchBar = () => {
                 onChange={handleInputChange}
             />
             <button id="searchButton" onClick={handleSearch}>Search</button>
-            <div id="searchResults">
+            {/* tried to add this to center the cards on the screen also did not work */}
+            <div id="searchResults" className="d-flex justify-content-center"> 
                 {searchResults.length === 0 ? (
                     <p>No results found.</p>
                 ) : (
-                    searchResults.map(classList => (
-                        <div key={classList.wvuClass}>
-                           <p className="list-group-item list-group-item-action"><Link to="/classes"><button id = "classButton">{classList.wvuClass}</button></Link></p> {/*line author: Avery Ryan*/}
+                    /*this uses the cards from bootstrap and then flex displays them depending on screen size -Alyssa */
+                    <div className="container">
+                        <div className="row">
+                            {searchResults.map(classList => (
+                                <div key={classList.wvuClass} className="col-6 col-md-4 col-lg-3 mb-4">
+                                    <div className="card" style={{ width: "200px", height: "250px" }}>
+                                        <div className="card-body">
+                                            <h5 className="card-title">{classList.wvuClass}</h5>
+                                            <p className="card-text">Class description or details here.</p>
+                                            <Link to="/classes" className="btn btn-primary">Go to Class</Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))
+                    </div>
                 )}
             </div>
         </div>

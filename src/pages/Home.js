@@ -53,7 +53,8 @@ const Home = () => {
                 <SearchBar />
                 </div>
 
-                <div id="classesBox">
+                {/*Old homepage box layout*/}
+                {/* <div id="classesBox">
                     <div className="behindClassesBox"> </div>
                     {classData.map((classItem, index) => ( //iterates over each item in classData and passes its information to a Card
                         <Card className = "card"
@@ -64,7 +65,7 @@ const Home = () => {
                     ))}
                    
 
-                </div>
+                </div> */}
 
             </div>
 
