@@ -57,17 +57,16 @@ const Home = () => {
                     <div className="behindClassesBox"> </div>
                     {classData.map((classItem, index) => ( //iterates over each item in classData and passes its information to a Card
                         <Card 
-                            
                             key={index} // Providing a unique key for each card
                             title={classItem.title}
-                            description={classItem.description}/>
+                            description={classItem.description}
+                            className={`card card-${index % 3 == 0 ? "whipple-blue" : index % 3 == 1 ? "behr-ice-cave" : "valspar-paint-prairie-dance"}`} //alternates color of each card
+                        />
                     ))}
-                   
-
                 </div>
 
             </div>
-
+    
             
 
 
