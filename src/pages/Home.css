@@ -90,14 +90,13 @@
    
  }
 
- .logo{
-   color: rgb(239, 250, 255);
-   padding-bottom: 50px;
-   padding-top: 10px;
-   font-weight: bold; 
-   font-size: 55px;
-
- }
+.logo {
+    color: rgb(239, 250, 255);
+    padding-bottom: 50px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 55px;
+}
 
  .user-pic{
    cursor:pointer;
@@ -155,14 +154,13 @@
    
  }
 
- .sub-menu-link{
-   display: flex;
-   align-items: center;
-   text-decoration: none;
-   color:#525252;
-   margin: 12px 0; 
-   
- }
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
 
     .sub-menu-link p {
         width: 100%;
@@ -182,15 +180,13 @@
     }
 
 .welcome {
-
-  color: steelblue;
-  font-weight: bold; 
-  background-color: rgb(239, 250, 255);
-  padding: 6px; 
-  border-radius: 10px; 
-  display: flexbox; 
-  font-size: 33px;
-  
+    color: steelblue;
+    font-weight: bold;
+    background-color: rgb(239, 250, 255);
+    padding: 6px;
+    border-radius: 10px;
+    display: flexbox;
+    font-size: 33px;
 }
 
 .profileBar {
