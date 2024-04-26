@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import "./ProfilePage.css";
-import "./AccountCreation";
+import "./CreateAccount";
 
 
 const availableIcons = [faUser, faUserCircle, faUserSecret, faUserNinja,

@@ -1,25 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import SearchBar from "../Components/Searchbar";
-import Card from "../Components/Card";
-import { useNavigate } from "react-router-dom";
-
 const Home = () => {
 
     let foundUser = localStorage.getItem('user')
-    foundUser = localStorage.getItem('user');
     const navigate = useNavigate()
 
     function handleLogout () {
         localStorage.clear()
         navigate('/login')
     }
-
-    const classData = [ //for use in cards
-        { title: "CS230", description: "Intro to Software Engineering" },
-        { title: "CS320", description: "Analysis of Algorithms" },
-        { title: "MATH251", description: "Calculus III" }
-    ];
 
     return (
         <div>

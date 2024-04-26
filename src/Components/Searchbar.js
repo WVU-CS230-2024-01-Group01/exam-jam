@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getDatabase, ref, set, get, child } from "firebase/database";
+import { getDatabase, ref, get, child } from "firebase/database";
 import { Link } from 'react-router-dom';
 import { app } from "./Firebase.js";
 
@@ -33,8 +33,7 @@ const SearchBar = () => {
         }).catch((error) => {
             console.error(error);
         });
-        const filtered = classList.filter(classLists => classLists.wvuClass.toLowerCase().includes(query.toLowerCase()));
-        return filtered;
+        return classList.filter(classLists => classLists.wvuClass.toLowerCase().includes(query.toLowerCase()));
     };
 
     return (
