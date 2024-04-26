@@ -35,27 +35,23 @@ function Login () {
         <div>
             <div class="Login">
                 <div class="form-box">
-                <h1>ExamJam</h1>
+                    <Link to="/"><button class="homepageButton"><img className="logo" src="/logoimage.jpeg" alt="ExamJam Logo" width="451.5px" length="164.25px" /></button></Link>
                 <h2>Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div class="info">
-                        <label for="username">Enter A Username</label>
-                        <input type="text" name="usernameBox" id="usernameBox" onChange={e => setUsername(e.target.value)}/> <br />
+                        <input placeholder="Enter username" type="text" name="usernameBox" id="usernameBox" onChange={e => setUsername(e.target.value)}/> <br />
                     </div>
                     <div class="info">
-                        <label for="password">Enter A Password</label>
-                        <input type="password" name="passwordBox" id="passwordBox" onChange={e => setPassword((md5(e.target.value)))}/> <br />
+                        <input placeholder="Enter password" type="password" name="passwordBox" id="passwordBox" onChange={e => setPassword((md5(e.target.value)))}/> <br />
                     </div>
                     <div class="info">
-                        <label for="passwordConf">Confirm Password</label>
-                        <input type="password" name="passwordConfBox" id="passwordConfBox" onChange={e => setConfPassword((md5(e.target.value)))}/> <br />
+                        <input placeholder="Confirm password" type="password" name="passwordConfBox" id="passwordConfBox" onChange={e => setConfPassword((md5(e.target.value)))}/> <br />
                     </div>
 
                     <div class="buttons">
                         <button type="submit">Login</button>
                         <Link to="/accountcreation"><button type="submit">Create an account</button></Link>
                     </div>
-                    <Link to="/"><button class="homepageButton">Homepage</button></Link>
                     
                 </form>
                 </div>

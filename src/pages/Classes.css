@@ -1,27 +1,73 @@
 .logo {
-    width: 120px;
+  width: 120px;
+}
+
+.button-style {
+  font-weight: bold;
+  border-radius: 11px;
+  margin: 5px;
+  font-size: 15px;
+  border-width: 3.5px;
+  border-color: rgb(183, 173, 173);
+  color: steelblue;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(239, 250, 255);
+  font: helvetica;
 }
 
 nav{
-   background:#27222b;
-   width:100%;
-   padding: 10px 10%;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   position: relative;
-   color: #eceaff;
+  background:#27222b;
+  width:100%;
+  padding: 10px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: #eceaff;
  }
 
 .class-title {
-   align-items: left;
+  align-items: left;
+  color: white;
+  font-weight: bold; 
+  padding: 6px; 
+  border-radius: 10px; 
+  display: flexbox; 
+  font-size: 33px;
 }
 
-.background {
-    background: linear-gradient(to right, steelblue, white);
-}
 
-#study-sets-container{
-   position: relative;
-   width:320px;
+
+.background{
+  background-image: url(loginBG.jpg);
+   color:#807c7c;
+  
+  font-weight: bold; 
+  padding: 6px; 
+  border-radius: 10px; 
+  display: flexbox; 
+  font-size: 33px;
+  height: 1008px;
+  width: 2080px;
+
+ }
+
+ #study-sets {
+  
+  font-weight: bold;
+  border-radius: 11px;
+  border-width: 3.5px;
+  border-color: rgb(183, 173, 173);
+  border: 1px solid black;
+  color: steelblue;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(239, 250, 255);
+  margin: 10px;
+  padding: 20px;
+  width: 30%; 
+  height:25%; 
+  font-size: 20px;
+  
  }

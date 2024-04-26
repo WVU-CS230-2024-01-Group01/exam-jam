@@ -32,18 +32,22 @@
 
 #searchResults {
     margin-top: 24px;
-    width: 50vw; 
+    width: 90vw;
+    /* Suppose to center cards horizontally but does not -Alyssa */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
  }
 
 #classesBox {
-    border: 2px solid black;
+    border: 20px solid black;
     margin: 20px 50px;
     padding: 10px;
     justify-content: center;
     background: linear-gradient(to right, steelblue, white);
     height: 65vh;
     display: flex;
-    
 }
 
     #classesBox .card {
@@ -92,22 +96,15 @@
    padding-top: 10px;
    font-weight: bold; 
    font-size: 55px;
-   
 
  }
-
-.searchResultsText {
-    margin: 20px;
-    display: none;
-    
-}
 
  .user-pic{
    cursor:pointer;
    margin-left:30;
    background-color:steelblue;
    width: 120px;
-   
+
  }
 
  .sub-menu-wrap{

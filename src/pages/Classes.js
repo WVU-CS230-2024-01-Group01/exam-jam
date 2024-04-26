@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import StudySets from './StudySets';
 import "./Classes.css"
-import { getDatabase, ref, set, get, child } from "firebase/database";
 
 export const Classes = () => {
 
@@ -10,22 +9,25 @@ export const Classes = () => {
       <div>
        <link rel="stylesheet" />
 
-         <div className="background">
+        <div className>
          <nav>
-           <h2 className="logo">ExamJam</h2>
+           <img className="logo" src="/logoimage.jpeg" alt="ExamJam Logo" width="10px" />
+
            <h1 className="class-title">Class Title{/** How do I retrieve the class title? */}</h1>
            
-
-           <Link to="/"><button>Homepage</button></Link>
-           <Link to="/profilepage"><button>Edit Profile</button></Link>
-           <Link to="/logout"><button>Logout</button></Link>
+           <Link to="/"><button className="button-style">Homepage</button></Link>
+           <Link to="/profilepage"><button className="button-style">Edit Profile</button></Link>
+           <Link to="/logout"><button className="button-style">Logout</button></Link>
                    
-        </nav>
-         <div id = "study-sets-container">
-            <StudySets />
-         </div>     
+          </nav>
+          <div id className= "background">
+            <div id="study-sets">   
+              <StudySets /> 
+            </div> 
+          </div>     
        </div>
-       </div>
+      </div>
+    
   );
 
 };
