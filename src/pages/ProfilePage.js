@@ -36,10 +36,11 @@ const ProfilePage = () => {
     };
 
     const fetchAccount = async()=> {
-        let username = localStorage.getItem('user')
+        setUsername(localStorage.getItem('user'))
+        let question = "FETCH"
         if (username) {
           try {
-            await axios.post("http://localhost:8081/accounts", {username})
+            await axios.post("http://localhost:8081/accounts", {question, username})
             .then( res => {
               setUsername(res.data.username)
               setEmail(res.data.email)

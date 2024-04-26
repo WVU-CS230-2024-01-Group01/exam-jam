@@ -12,8 +12,9 @@ function Login () {
 
     async function handleSubmit(event){
         event.preventDefault();
+        let question = "LOGIN"
         if (confPassword === password){
-            await axios.post('http://localhost:8081/accounts', {username, password})
+            await axios.post('http://localhost:8081/accounts', {question, username, password})
             .then( res => {
                 if (res.data === "Login Successful") {
                     localStorage.setItem('user', username)

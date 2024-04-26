@@ -17,17 +17,7 @@ const db = mysql.createConnection({
 
 app.post("/accounts", (req, res) => {
 
-    /**
-     * Object.keys(req.body).length acquires the length of the given request
-     * 
-     * When the request is 1 object, it is a username fetch to get the account in the database
-     * When the request is 2 objects, it is a login where username and password is given
-     * When the request is 3 objects, it is an account creation where username, email, and password is given
-     * 
-     * Probably better ways to implement this functionality but it works and that's all that matters
-     */
-
-    if (Object.keys(req.body).length === 1) { // FETCH ACCOUNT
+    if (req.body.question === "FETCH") { // FETCH ACCOUNT
         const q = "SELECT * FROM accounts WHERE username = ?"
         
         try {
@@ -44,7 +34,7 @@ app.post("/accounts", (req, res) => {
         }
     }
 
-    else if (Object.keys(req.body).length === 2){ // LOGIN
+    else if (req.body.question === "LOGIN"){ // LOGIN
         const q = "SELECT * FROM accounts WHERE username = ? AND password = ?"
 
         db.query(q, [req.body.username, req.body.password], (err, data) => {
@@ -57,7 +47,7 @@ app.post("/accounts", (req, res) => {
         })
     }
 
-    else if (Object.keys(req.body).length === 3){ // CREATE ACCOUNT
+    else if (req.body.question === "CREATE"){ // CREATE ACCOUNT
         const q = "INSERT INTO accounts (`email`, `username`, `password`) VALUES (?, ?, ?)"
 
         db.query(q, [req.body.email, req.body.username, req.body.password], (err, data) => {
@@ -67,14 +57,29 @@ app.post("/accounts", (req, res) => {
     }
 })
 
-// currently just updates the picture selected by user, will have to be updated later for favorited and created study sets
 app.put("/accounts", (req, res) => { 
-    const q = "UPDATE accounts SET `picture` = ? WHERE `username` = ?"
 
-    db.query(q, [req.body.index, req.body.username], (err, data) => {
-        if(err) return res.json(err)
-        return res.json(data)
-    })
+    if (req.body.question === "UPDATE_PICTURE"){
+        const q = "UPDATE accounts SET `picture` = ? WHERE `username` = ?"
+
+        db.query(q, [req.body.index, req.body.username], (err, data) => {
+            if(err) return res.json(err)
+            return res.json(data)
+        })
+    }
+
+    else if (req.body.question === "UPDATE_CREATEDSETS") {
+        const q = "UPDATE accounts SET `created_sets` = CONCAT_WS(',', `created_sets`, ?) WHERE `username` = ?"
+
+        db.query(q, [req.body.ss_id, req.body.username], (err, data) => {
+            if(err) return res.json(err)
+            return res.json(data)
+        })
+    }
+
+    else if (req.body.question === "UPDATE_FAVORITESETS") {
+
+    }
 })
 
 app.get("/", (req,res)=>{
@@ -98,11 +103,12 @@ app.get("/studysets/:ss_id", (req,res)=>{
 })
 
 app.post("/studysets", (req,res)=>{
-    const q = "INSERT INTO studysets (`title`) VALUES (?)"
+    const q = "INSERT INTO studysets (`title`, `username`) VALUES (?,?)"
     const value = req.body.title
-    db.query(q, [value], (err,data)=>{
+    const uid = req.body.uid
+    db.query(q, [value, uid], (err,data)=>{
         if(err) return res.json(err)
-        return res.json("Study set has been created")
+        return res.json(data.insertId);
     })
 })
 

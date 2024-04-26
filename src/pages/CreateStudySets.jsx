@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CreateStudySets = () =>{
+    let username = localStorage.getItem('user')
     const [studyset,setStudySet]= useState({
-        title: ""
+        title: "",
+        uid: username
     })
 
     const navigate = useNavigate()
@@ -16,7 +18,11 @@ const CreateStudySets = () =>{
     const handleClick=async e=>{
         e.preventDefault()
         try{
-            await axios.post("http://localhost:8081/studysets", studyset)
+            let res = await axios.post("http://localhost:8081/studysets", studyset)
+            let ss_id = res.data
+            let question = "UPDATE_CREATEDSETS"
+            await axios.put("http://localhost:8081/accounts", {question, username, ss_id})  
+            
             navigate("/studysets")
         }catch(err){
             console.log(err)
