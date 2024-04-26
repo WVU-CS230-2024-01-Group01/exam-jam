@@ -1,18 +1,22 @@
 const express = require('express')
 const mysql = require('mysql')
 const cors = require('cors')
-
+const dotenv = require('dotenv').config()
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
+if (dotenv.error){
+    console.error('error loading', dotenv.error)
+    process.exit(1)
+}
 
 const db = mysql.createConnection({
-    host:"sql5.freemysqlhosting.net",
-    user:"sql5697025",
-    password:"DvY6vZq5F6",
-    database:"sql5697025"
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
 })
 
 app.post("/accounts", (req, res) => {
