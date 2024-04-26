@@ -34,8 +34,8 @@ const ProfilePage = () => {
     };
 
     const fetchAccount = async()=> {
-        setUsername(localStorage.getItem('user'))
-        let question = "FETCH"
+        setUsername(localStorage.getItem('user'));
+        const question = "FETCH";
         if (username) {
           try {
             await axios.post("http://localhost:8081/accounts", {question, username})
@@ -53,7 +53,8 @@ const ProfilePage = () => {
     }
 
     let updateIcon = async(index)=> {
-        await axios.put("http://localhost:8081/accounts", {index, username})
+        const question = "UPDATE_PICTURE"
+        await axios.put("http://localhost:8081/accounts", {question, index, username})
         .then( res => {
             console.log(res.data)
         })
