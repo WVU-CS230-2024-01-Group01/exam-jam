@@ -12,7 +12,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
-    "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "firebase": "^10.10.0",
     "md5": "^2.3.0",
@@ -56,6 +55,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^8.2.2",
     "react-scripts": "^5.0.1"
   }
 }

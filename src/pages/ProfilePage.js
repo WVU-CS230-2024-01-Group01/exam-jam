@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button, Card, Modal} from 'react-bootstrap'; 
 import {
   faUser, faUserCircle, faUserSecret, faUserNinja,
-  faCat, faDog, faHorse, faOtter, faFrog, faDragon, faHeart,
-  faMusic, faSun, faComputer, faSignOutAlt
+  faCat, faDog, faHorse, faOtter, faFrog, faDragon, faComputer, faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import "./ProfilePage.css";
@@ -13,8 +12,7 @@ import "./AccountCreation";
 
 
 const availableIcons = [faUser, faUserCircle, faUserSecret, faUserNinja,
-  faCat, faDog, faHorse, faOtter, faFrog, faDragon, faHeart,
-  faMusic, faSun, faComputer
+  faCat, faDog, faHorse, faOtter, faFrog, faDragon, faComputer
 ];
 
 const ProfilePage = () => {
@@ -27,7 +25,7 @@ const ProfilePage = () => {
 
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
-
+    const [isProfessor, setIsProfessor] = useState(false);
 
     const handleIconSelect = (icon, index) => {
         setSelectedIcon(icon);
@@ -45,6 +43,7 @@ const ProfilePage = () => {
               setUsername(res.data.username)
               setEmail(res.data.email)
               setSelectedIcon(availableIcons[res.data.picture])
+              setIsProfessor(res.data.isProfessor); // add field isProfessor in account data
             })
             .catch(err => console.log(err))
           } catch (err) {
@@ -99,7 +98,7 @@ const ProfilePage = () => {
                                       Select Profile Icon
                                   </Button>
                               </div>
-                              <p className="text-muted mb-1">Student</p>
+                              <p className="text-muted mb-1">{isProfessor ? 'Professor' : 'Student'}</p>
                               <p className="text-muted mb-4">West Virginia University</p>
                           </Card.Body>
                       </Card>
@@ -133,6 +132,18 @@ const ProfilePage = () => {
                               </Card>
                           </Card.Body>
                       </Card>
+                      {isProfessor && ( // "Created Classes" card for professors
+                          <Card className="mb-4">
+                              <Card.Body>
+                                  <h5 className="card-title">Created Classes</h5>
+                                  <Card bg="light" className="mb-3">
+                                      <Card.Body>
+                                          <p className="card-text text-muted">Created Classes Will Appear Here</p>
+                                      </Card.Body>
+                                  </Card>
+                              </Card.Body>
+                          </Card>
+                      )}
                   </div>
               </div>
           </div>

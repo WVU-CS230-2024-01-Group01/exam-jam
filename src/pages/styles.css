@@ -1,8 +1,8 @@
 
-.search-container {
+/*.search-container {
     text-align: center;
     margin-top: 50px;
- }
+ }*/
  
  #searchInput {
     padding: 10px;
@@ -24,7 +24,7 @@
  }
 
 #classesBox {
-    border: 2px solid black;
+    border: 1px solid black;
     margin: 20px 50px;
     padding: 10px;
     justify-content: center;
@@ -33,12 +33,12 @@
     display: flex;
 }
 
- .hero{
-   width: 100%;
-   min-height:100vh;
-   background: #eceaff;
-   color:#807c7c;
- }
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: #eceaff;
+    color: #807c7c;
+}
 
  nav{
    background:#27222b;
@@ -134,13 +134,23 @@
    font-weight:600;
  }
 
- .card {
-  color: #2a4e6c;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid black;
-  width: 30%; 
-  height: 20vh; 
+#classesBox .card {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    width: 30%; 
+    height: 20vh; 
 }
 
+#classesBox .card-whipple-blue {
+    background-color: #769eb0;
+}
+
+#classesBox .card-behr-ice-cave {
+    background-color: #2b677e;
+}
+
+#classesBox .card-valspar-paint-prairie-dance {
+    background-color: #d9bf7d;
+}
 

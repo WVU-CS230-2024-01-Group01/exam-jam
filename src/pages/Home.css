@@ -1,5 +1,5 @@
 
-.search-container {
+.hero .search-container {
     text-align: center;
     margin-top: 50px;
     background-image: url(loginBG.jpg);
@@ -12,7 +12,7 @@
     border-width: 3px;
     border-color: grey;
     color: steelblue;
-    background-color: rgb(239, 250, 255);;
+    background-color: rgb(239, 250, 255);
     
  }
  
@@ -29,8 +29,8 @@
 
  }
 
- 
- #searchResults {
+
+#searchResults {
     margin-top: 24px;
     width: 90vw;
     /* Suppose to center cards horizontally but does not -Alyssa */
@@ -41,16 +41,34 @@
  }
 
 #classesBox {
-    border: 2px solid black;
+    border: 20px solid black;
     margin: 20px 50px;
     padding: 10px;
     justify-content: center;
     background: linear-gradient(to right, steelblue, white);
     height: 65vh;
     display: flex;
-
-    
 }
+
+    #classesBox .card {
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid black;
+        width: 30%;
+        height: 20vh;
+    }
+
+     .card-whipple-blue {
+        background-color: #769eb0;
+    }
+
+     .card-behr-ice-cave {
+        background-color: #2b677e;
+    }
+
+     .card-valspar-paint-prairie-dance {
+        background-color: #d9bf7d;
+    }
 
  .hero{
    width: 100%;
@@ -81,11 +99,6 @@
 
  }
 
-.searchResultsText {
-    margin: 20px;
-    display: none;
-}
-
  .user-pic{
    cursor:pointer;
    margin-left:30;
@@ -110,12 +123,12 @@
    
  }
 
- .sub-menu{
-   background: #fff;
-   padding: 20px;
-   margin:15px;
-   color:#525252;
- }
+.sub-menu {
+    background: #fff;
+    padding: 20px;
+    margin: 15px;
+    color: #525252;
+}
 
  .user-info{
    display: flex;
@@ -151,34 +164,22 @@
    
  }
 
- .sub-menu-link p{
-   width: 100%;
- }
+    .sub-menu-link p {
+        width: 100%;
+    }
 
- .sub-menu-link span{
-   font-size: 22px;
-   transition: transform 0.5s;
- }
+    .sub-menu-link span {
+        font-size: 22px;
+        transition: transform 0.5s;
+    }
 
- .sub-menu-link:hover span{
-   transform: translate(5px);
- }
+    .sub-menu-link:hover span {
+        transform: translate(5px);
+    }
 
- .sub-menu-link:hover p{
-   font-weight:600;
- }
-
-.card {
-    color: steelblue;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid black;
-    width: 30%; 
-    height: 20vh; 
-    font-size: 20px;
-    
-    
-}
+    .sub-menu-link:hover p {
+        font-weight: 600;
+    }
 
 .welcome {
 
@@ -203,11 +204,6 @@
  text-align: center;
  padding: 10px;
  background-color: rgb(239, 250, 255);
-
-
 }
 
 
-.behindClassesBox {
-  background-image: url(loginBG.jpg);
-}
