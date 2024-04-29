@@ -63,9 +63,11 @@ const EditStudySets = () => {
         e.preventDefault();
         try {
             await axios.put(`http://localhost:8081/studysets/${setId}`, studyset);
-            studycards.map((studycard)=>(
-            axios.put(`http://localhost:8081/studycards/${studycard.card_id}`, studycard)
-            ))
+            studycards.array.forEach(element => {
+                (studycard)=>(
+                    axios.put(`http://localhost:8081/studycards/${studycard.card_id}`, studycard)
+                    )
+            });
             navigate("/studysets");
         } catch (err) {
             console.log(err);

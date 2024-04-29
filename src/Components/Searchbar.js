@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getDatabase, ref, set, get, child } from "firebase/database";
+import { getDatabase, ref, get, child } from "firebase/database";
 import { Link } from 'react-router-dom';
 import { app } from "./Firebase.js";
 
@@ -13,14 +13,10 @@ const SearchBar = () => {
     };
 
     const handleSearch = async () => {
-        if (searchInput === "") {
-            alert("Please enter a valid search term.");
-            return;
+        if (searchInput !== "") { //only search if provided a valid search term
+            const searchResultsData = await searchClassList(searchInput);
+            setSearchResults(searchResultsData);
         }
-
-        // Simulate searching class list
-        const searchResultsData = await searchClassList(searchInput);
-        setSearchResults(searchResultsData);
     };
 
     const searchClassList = async (query) => {
@@ -29,13 +25,13 @@ const SearchBar = () => {
         let classList = [];
         const dbRef = ref(getDatabase());
         await get(child(dbRef, `wvuList`)).then((snapshot) => {
-          if (snapshot.exists()) {
-            classList = snapshot.val();
-          } else {
-            console.log("No data available");
-          }
+            if (snapshot.exists()) {
+                classList = snapshot.val();
+            } else {
+                console.log("No data available");
+            }
         }).catch((error) => {
-          console.error(error);
+            console.error(error);
         });
         const filtered = classList.filter(classLists => classLists.title.toLowerCase().includes(query.toLowerCase()));
         return filtered;
@@ -51,7 +47,7 @@ const SearchBar = () => {
             />
             <button id="searchButton" onClick={handleSearch}>Search</button>
             {/* tried to add this to center the cards on the screen also did not work */}
-            <div id="searchResults" className="d-flex justify-content-center"> 
+            <div id="searchResults" className="d-flex justify-content-center">
                 {searchResults.length === 0 ? (
                     <p>No results found.</p>
                 ) : (
@@ -78,4 +74,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-

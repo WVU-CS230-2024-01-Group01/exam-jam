@@ -3,6 +3,7 @@
 }
 
 .button-style {
+  font: Helvetica, sans-serif;
   font-weight: bold;
   border-radius: 11px;
   margin: 5px;
@@ -13,7 +14,6 @@
   text-align: center;
   padding: 10px;
   background-color: rgb(239, 250, 255);
-  font: helvetica;
 }
 
 nav{

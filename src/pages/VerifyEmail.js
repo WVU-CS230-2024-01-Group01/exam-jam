@@ -21,10 +21,11 @@ function VerifyEmail () {
       };
 
       async function addAccount(){
+        let question = "CREATE"
         let email = localStorage.getItem('email')
         let username = localStorage.getItem('username')
         let password = localStorage.getItem('password')
-        await axios.post('http://localhost:8081/accounts', {email, username, password})
+        await axios.post('http://localhost:8081/accounts', {question, email, username, password})
         .then (
             localStorage.clear()
         )
