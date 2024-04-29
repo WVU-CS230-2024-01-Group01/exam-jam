@@ -129,7 +129,7 @@ const CreateAccount = () => {
   
           <div className="buttons">
             <input type="submit" value="Send Verification Email" onClick={sendEmail} disabled={!passwordValidity || (inputUser.length < 5) || !validator.isEmail(inputEmail)}/>
-            <Link to="/login"><button>Go Back</button></Link>
+            <Link to="/"><button>Go Back</button></Link>
           </div>
         </form>
       </div>

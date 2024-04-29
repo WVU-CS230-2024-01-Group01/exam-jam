@@ -26,6 +26,7 @@ const ProfilePage = () => {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [isProfessor, setIsProfessor] = useState(false);
+    const [createdSets, setCreatedSets] = useState('');
 
     const handleIconSelect = (icon, index) => {
         setSelectedIcon(icon);
@@ -44,6 +45,7 @@ const ProfilePage = () => {
               setEmail(res.data.email)
               setSelectedIcon(availableIcons[res.data.picture])
               setIsProfessor(res.data.isProfessor); // add field isProfessor in account data
+              setCreatedSets(res.data.created_sets);
             })
             .catch(err => console.log(err))
           } catch (err) {
@@ -76,7 +78,7 @@ const ProfilePage = () => {
                           <div className="banner">
                             <div className="logo-container">
                               <img className="logo" src="/logoimage.jpeg" alt="ExamJam Logo" width="451.5px"  length="164.25px"/>
-                              <Link to="/" className="btn btn-primary">Homepage</Link>
+                              <Link to="/home" className="btn btn-primary">Homepage</Link>
                               </div>
                           </div>
                       </div>
@@ -128,7 +130,7 @@ const ProfilePage = () => {
                               <h5 className="card-title">Created Study Sets</h5>
                               <Card bg="light" className="mb-3">
                                   <Card.Body>
-                                      <p className="card-text text-muted">Created Study Sets Will Appear Here</p>
+                                      <p className="card-text text-muted">{createdSets}</p>
                                   </Card.Body>
                               </Card>
                           </Card.Body>

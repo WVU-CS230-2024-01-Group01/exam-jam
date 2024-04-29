@@ -139,7 +139,7 @@ const EditStudySets = () => {
                Confirm
            </button>
            <button className="styledButtons">
-               <Link to={`/studysets`}>Go Back</Link>
+           <Link to={`/studysets/${setId}`}>Go Back</Link>
            </button>
        </div>
     );

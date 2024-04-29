@@ -44,6 +44,7 @@ const SearchBar = () => {
                 type="text"
                 value={searchInput}
                 onChange={handleInputChange}
+                placeholder="Ex: CS 230"
             />
             <button id="searchButton" onClick={handleSearch}>Search</button>
             {/* tried to add this to center the cards on the screen also did not work */}

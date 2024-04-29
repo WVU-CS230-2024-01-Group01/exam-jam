@@ -22,9 +22,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Login />} />
           <Route exact path="/accountcreation" element={<CreateAccount />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/home" element={<Home />} />
           <Route exact path="/ProfilePage" element={<ProfilePage />} />
           <Route exact path="/logout" element={<Logout />} />
           <Route exact path="/verifyemail" element={<VerifyEmail />} />
