@@ -25,10 +25,10 @@ const CreateStudySets = () =>{
     const handleClick=async e=>{
         e.preventDefault()
         try{
-            let res = await axios.post("http://localhost:8081/studysets", studyset)
+            let res = await axios.post("http://localhost:8081/studysets/", studyset)
             let ss_id = res.data
             let question = "UPDATE_CREATEDSETS"
-            await axios.put("http://localhost:8081/accounts", {question, username, ss_id})  
+            await axios.put("http://localhost:8081/accounts/", {question, username, ss_id})  
             
             navigate("/classes/"+courseId);
         }catch(err){

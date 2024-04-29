@@ -36,7 +36,10 @@ export const Classes = () => {
 
   const handleDelete = async (ss_id) =>{
     try{
-        await axios.delete(`http://localhost:8081/studysets/${ss_id}`);
+        let res = await axios.delete(`http://localhost:8081/studysets/${ss_id}`);
+        let question = "DELETE_CREATEDSET"
+        console.log(ss_id)
+        await axios.put("http://localhost:8081/accounts/", {question, ss_id}) 
         setStudySets(studysets.filter(set => set.ss_id !== ss_id));
     }catch(err){
         console.log(err)
