@@ -1,4 +1,6 @@
-
+/*
+   This stylesheet will be shared among all studyset-related files
+*/
 .headDivider {
     background:#27222b;
  }
@@ -53,7 +55,7 @@
     border-width: 3px;
     border-color: grey;
     color: steelblue;
-    background-color: rgb(239, 250, 255);;
+    background-color: rgb(239, 250, 255);
    
  }
  
@@ -66,6 +68,66 @@
 
  .backgroundHeader {
    background-image: url(loginBG.jpg);
+}
+
+/*
+   SingleStudySet.jsx specific styles 
+*/
+
+.studyset {
+     width: 100%;
+  min-height:100vh;
+  background-image: url(loginBG.jpg);
+  color:#807c7c;
+}
+
+   .button-style {
+  font: Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 11px;
+  margin: 5px;
+  font-size: 15px;
+  border-width: 3.5px;
+  border-color: rgb(183, 173, 173);
+  color: steelblue;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(239, 250, 255);
+}
+
+.study-set-title {
+  align-items: left;
+  color: black;
+  font-weight: bold; 
+  padding: 6px; 
+  border-radius: 10px; 
+  display: flexbox; 
+  font-size: 33px;
+}
+
+/* Aligns study cards in a grid - side by side  */
+.study-card-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+
+}
+
+#study-card {
+  font-weight: bold;
+  border-radius: 11px;
+  border-width: 3.5px;
+  border-color: rgb(183, 173, 173);
+  border: 1px solid black;
+  color: steelblue;
+  text-align: center;
+  justify: center;
+  padding: 10px;
+  background-color: rgb(239, 250, 255);
+  margin: 10px;
+  padding: 20px;
+  width: 30%; 
+  height: 70%; 
+  font-size: 20px;
 }
 
 /*REPEATED STYLES FOR LOGIN

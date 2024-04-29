@@ -61,7 +61,7 @@ export const Classes = () => {
           </nav>
           <div id="study-sets">  
             {studysets.map(studyset=>(
-                <div className="studyset" key={studyset.ss_id}>
+                <div className="studyset-classes" key={studyset.ss_id}>
                     <Link to={`/studysets/${studyset.ss_id}`} >
                     <h1>{studyset.title}</h1>
                     </Link>

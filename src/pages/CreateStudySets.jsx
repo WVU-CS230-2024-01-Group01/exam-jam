@@ -46,7 +46,7 @@ const CreateStudySets = () =>{
     
     return(
         <div className="Login">
-    <div className="form-box">
+        <div className="form-box">
         <h1>Create Study Set</h1>
         <form onSubmit={handleClick}>
             <div className="info">
@@ -54,7 +54,7 @@ const CreateStudySets = () =>{
                 <input className="createStudySetInput" type="text" placeholder="Enter a title" onChange={handleChange} name="title" />
             </div>
             <div className="buttons">
-                <button type="submit" className="createButton">Create</button>
+                <button type="submit" className="styledButtons">Create</button>
                 <button className="styledButtons" onClick={handleCancel}>Cancel</button>
             </div>
         </form>
