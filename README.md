@@ -59,7 +59,7 @@ To install ExamJam, follow these steps:
 ### Creating Study Materials
 
 1. After clicking on a course's class page, click 'Create (material)'.
-2. Give your material and Title and hit 'Create'.
+2. Give your material a Title and hit 'Create'.
 3. Enter applicable information for future study material use.
 4. Created study material will appear in your Profile Page.
 
