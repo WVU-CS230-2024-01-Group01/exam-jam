@@ -55,7 +55,7 @@ export const Classes = () => {
                       <h1 className="class-title">{course.title}</h1>
               ))}
             </div>
-           <Link to="/"><button className="button-style">Homepage</button></Link>
+           <Link to="/home"><button className="button-style">Homepage</button></Link>
            <Link to="/profilepage"><button className="button-style">Edit Profile</button></Link>
            <Link to="/logout"><button className="button-style">Logout</button></Link>      
           </nav>

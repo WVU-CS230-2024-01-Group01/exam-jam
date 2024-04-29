@@ -76,7 +76,7 @@ const ProfilePage = () => {
                           <div className="banner">
                             <div className="logo-container">
                               <img className="logo" src="/logoimage.jpeg" alt="ExamJam Logo" width="451.5px"  length="164.25px"/>
-                              <Link to="/" className="btn btn-primary">Homepage</Link>
+                              <Link to="/home" className="btn btn-primary">Homepage</Link>
                               </div>
                           </div>
                       </div>
