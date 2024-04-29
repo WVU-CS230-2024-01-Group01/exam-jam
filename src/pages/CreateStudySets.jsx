@@ -36,11 +36,21 @@ const CreateStudySets = () =>{
 
     console.log(studyset)
     return(
-        <div className="form">
-            <h1>Create Study Set</h1>
-            <input type="text" placeholder="Title" onChange={handleChange} name="title"/>
-            <button className="formButton" onClick={handleClick}>Create</button>
-        </div>
+        <div className="Login">
+    <div className="form-box">
+        <h1>Create Study Set</h1>
+        <form onSubmit={handleClick}>
+            <div className="info">
+                <label htmlFor="title">Title</label>
+                <input className="createStudySetInput" type="text" placeholder="Enter a title" onChange={handleChange} name="title" />
+            </div>
+            <div className="buttons">
+                <button type="submit" className="createButton">Create</button>
+                <Link to="/studysets" className="styledButtons">Cancel</Link>
+            </div>
+        </form>
+    </div>
+</div>
     )
 }
 
