@@ -40,21 +40,13 @@ nav{
 
 
 .background{
+  width: 100%;
+  min-height:100vh;
   background-image: url(loginBG.jpg);
-   color:#807c7c;
-  
-  font-weight: bold; 
-  padding: 6px; 
-  border-radius: 10px; 
-  display: flexbox; 
-  font-size: 33px;
-  height: 1008px;
-  width: 2080px;
-
+  color:#807c7c;
  }
 
  #study-sets {
-  
   font-weight: bold;
   border-radius: 11px;
   border-width: 3.5px;
@@ -69,5 +61,4 @@ nav{
   width: 30%; 
   height:25%; 
   font-size: 20px;
-  
  }

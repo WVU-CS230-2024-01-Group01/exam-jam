@@ -47,7 +47,7 @@ export const Classes = () => {
       <div>
        <link rel="stylesheet" />
 
-        <div className>
+        <div className="background">
          <nav>
            <img className="logo" src="/logoimage.jpeg" alt="ExamJam Logo" width="10px" />
            <div>
@@ -59,8 +59,7 @@ export const Classes = () => {
            <Link to="/profilepage"><button className="button-style">Edit Profile</button></Link>
            <Link to="/logout"><button className="button-style">Logout</button></Link>      
           </nav>
-          <div className= "background">
-            <div id="study-sets">  
+          <div id="study-sets">  
             {studysets.map(studyset=>(
                 <div className="studyset" key={studyset.ss_id}>
                     <Link to={`/studysets/${studyset.ss_id}`} >
@@ -72,7 +71,7 @@ export const Classes = () => {
             <button>
             <Link to={`/createstudysets/${courseId}`}>Create Study Set</Link>
             </button>
-            </div> 
+           
           </div>     
        </div>
       </div>
