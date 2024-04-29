@@ -47,24 +47,25 @@ const StudySets = () =>{
         }
     }
 
-    return(<div>
-            <div className= "studysets">
-                {studysets.map(studyset=>(
-                    <div className="studyset" key={studyset.ss_id}>
-                    <Link to={`/studysets/${studyset.ss_id}`} >
-                    <h1>{studyset.title}</h1>
-                    </Link>
-                    <button className="delete" onClick={()=>handleDelete(studyset.ss_id)}>Delete</button>
-                    </div>
-                ))}
-            </div>
-        <button>
-            <Link to="/createstudysets">Create Study Set</Link>
-        </button>
-        <button>
-            <Link to="/" className="btn btn-primary">Homepage</Link>
-        </button>
-    </div>
+    return(<div className="headDivider">
+           <div className= "studysets">
+               {studysets.map(studyset=>(
+                   <div className="studyset" key={studyset.ss_id}>
+                   <Link to={`/studysets/${studyset.ss_id}`} >
+                   <h1>{studyset.title}</h1>
+                   </Link>
+                   <button className="styledButtons" onClick={()=>handleDelete(studyset.ss_id)}>Delete</button>
+                   </div>
+               ))}
+           </div>
+       <button className="styledButtons">
+           <Link to="/createstudysets">Create Study Set</Link>
+       </button>
+       <button className="styledButtons">
+           <Link to="/" className="btn btn-primary">Homepage</Link>
+       </button>
+       <div className="background"> </div>
+   </div>
     )
 }
 
