@@ -29,7 +29,6 @@ const Home = () => {
                         <>
                             <Link to="/profilepage"><button className="profileBar"> Edit Profile </button></Link>
                             <Link to="/logout"><button onClick={handleLogout} className="profileBar"> Logout </button></Link>
-                            <Link to="/studysets"><button className="profileBar">Study Sets</button> </Link>
                         </>
                     ) : (
                        <Link to="/login"><button className="profileBar"> Login </button></Link>

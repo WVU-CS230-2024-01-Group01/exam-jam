@@ -5,7 +5,7 @@ import "./Classes.css"
 
 export const Classes = () => {
   const [course,setCourse]= useState([]);
-  const [studyset,setStudySet]= useState([]);
+  const [studysets,setStudySets]= useState([]);
 
   const location = useLocation()
   const courseId = location.pathname.split("/")[2];
@@ -23,16 +23,25 @@ export const Classes = () => {
     },[courseId])
 
     useEffect(()=>{
-      const fetchSingleStudySet = async ()=>{
+      const fetchStudySets = async ()=>{
           try{
               const res = await axios.get(`http://localhost:8081/studysets/by-class/${courseId}`)
-              setStudySet(res.data)
+              setStudySets(res.data)
           }catch(err){
               console.log(err)
           }
       }
-      fetchSingleStudySet()
+      fetchStudySets()
   },[courseId])
+
+  const handleDelete = async (ss_id) =>{
+    try{
+        await axios.delete(`http://localhost:8081/studysets/${ss_id}`);
+        setStudySets(studysets.filter(set => set.ss_id !== ss_id));
+    }catch(err){
+        console.log(err)
+    }
+}
 
     return (
       <div>
@@ -50,14 +59,19 @@ export const Classes = () => {
            <Link to="/profilepage"><button className="button-style">Edit Profile</button></Link>
            <Link to="/logout"><button className="button-style">Logout</button></Link>      
           </nav>
-          <div id className= "background">
+          <div className= "background">
             <div id="study-sets">  
-            {studyset.map(studyset=>(
+            {studysets.map(studyset=>(
                 <div className="studyset" key={studyset.ss_id}>
+                    <Link to={`/studysets/${studyset.ss_id}`} >
                     <h1>{studyset.title}</h1>
-                    <button className="editstudysets"><Link to={`/editstudysets/${studyset.ss_id}`}>Edit</Link></button>
+                    </Link>
+                    <button className="delete" onClick={()=>handleDelete(studyset.ss_id)}>Delete</button>
                 </div>
             ))}
+            <button>
+            <Link to={`/createstudysets/${courseId}`}>Create Study Set</Link>
+            </button>
             </div> 
           </div>     
        </div>

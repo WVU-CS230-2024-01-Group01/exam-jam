@@ -99,7 +99,7 @@ app.get("/studysets", (req,res)=>{
 })
 
 app.get("/studysets/:ss_id", (req,res)=>{
-    const q = "SELECT ss_id, `title` FROM studysets WHERE ss_id = ?"
+    const q = "SELECT ss_id, `title`, `class_id` FROM studysets WHERE ss_id = ?"
     db.query(q,req.params.ss_id,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -107,7 +107,7 @@ app.get("/studysets/:ss_id", (req,res)=>{
 })
 
 app.get("/studysets/by-class/:class_id", (req,res)=>{
-    const q = "SELECT class_id, `title` FROM studysets WHERE class_id = ?"
+    const q = "SELECT class_id, `title`, `ss_id` FROM studysets WHERE class_id = ?"
     db.query(q,req.params.class_id,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -115,10 +115,11 @@ app.get("/studysets/by-class/:class_id", (req,res)=>{
 })
 
 app.post("/studysets", (req,res)=>{
-    const q = "INSERT INTO studysets (`title`, `username`) VALUES (?,?)"
+    const q = "INSERT INTO studysets (`title`, `class_id`, `username`) VALUES (?,?,?)"
     const value = req.body.title
+    const courseId = req.body.class_id
     const uid = req.body.uid
-    db.query(q, [value, uid], (err,data)=>{
+    db.query(q, [value,courseId, uid], (err,data)=>{
         if(err) return res.json(err)
         return res.json(data.insertId);
     })

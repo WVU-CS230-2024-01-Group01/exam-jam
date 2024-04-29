@@ -63,12 +63,10 @@ const EditStudySets = () => {
         e.preventDefault();
         try {
             await axios.put(`http://localhost:8081/studysets/${setId}`, studyset);
-            studycards.array.forEach(element => {
-                (studycard)=>(
-                    axios.put(`http://localhost:8081/studycards/${studycard.card_id}`, studycard)
-                    )
-            });
-            navigate("/studysets");
+            studycards.map((studycard)=>(
+            axios.put(`http://localhost:8081/studycards/${studycard.card_id}`, studycard)
+            ))
+            navigate("/studysets/"+setId);
         } catch (err) {
             console.log(err);
         }
@@ -140,7 +138,7 @@ const EditStudySets = () => {
                 Confirm
             </button>
             <button className="formButton">
-                <Link to={`/studysets`}>Go Back</Link>
+                <Link to={`/studysets/${setId}`}>Go Back</Link>
             </button>
         </div>
     );

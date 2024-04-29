@@ -11,7 +11,10 @@ import CreateAccount from "./pages/CreateAccount";
 import ProfilePage from "./pages/ProfilePage";
 import Logout from "./pages/Logout";
 import VerifyEmail from "./pages/VerifyEmail";
-
+import Classes from "./pages/Classes";
+import EditStudySets from "./pages/EditStudySets";
+import SingleStudySet from './pages/SingleStudySet';
+import CreateStudySets from "./pages/CreateStudySets";
 
 function App() {
   return (
@@ -26,6 +29,11 @@ function App() {
           <Route exact path="/verifyemail" element={<VerifyEmail />} />
           <Route exact path="*" element={<Navigate to="/" />} />
           <Route exact path="/classes/:class_id" element = {<Classes />} />
+          <Route exact path="/editstudysets/:ss_id" element={<EditStudySets />} />
+          <Route exact path ="/studysets/:ss_id" element={<SingleStudySet/>}/>
+          <Route exact path="/createstudysets/:class_id" element={<CreateStudySets />} />
+          
+
         </Routes>
       </BrowserRouter>
 

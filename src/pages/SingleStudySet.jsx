@@ -40,6 +40,7 @@ const SingleStudySet = () => {
                             <div className="studyset" key={studyset.ss_id}>
                                 <h1>{studyset.title}</h1>
                                 <button className="editstudysets"><Link to={`/editstudysets/${studyset.ss_id}`}>Edit</Link></button>
+                                <button className="backtoclass"><Link to={`/classes/${studyset.class_id}`}>Back to Class</Link></button>
                             </div>
                         ))}
                     </div>

@@ -50,14 +50,14 @@ function Login () {
                     <h2>{isProfessor ? 'Professor' : 'Student'} Login</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="info">
-                            <input placeholder="Enter username" type="text" name="usernameBox" id="usernameBox" onChange={e => setUsername(e.target.value)}/> <br />
+                            <input placeholder="Enter Username" type="text" name="usernameBox" id="usernameBox" onChange={e => setUsername(e.target.value)}/> <br />
                         </div>
                         <div className="info">
-                            <input placeholder="Enter password" type="password" name="passwordBox" id="passwordBox" onChange={e => setPassword((md5(e.target.value)))}/> <br />
+                            <input placeholder="Enter Password" type="password" name="passwordBox" id="passwordBox" onChange={e => setPassword((md5(e.target.value)))}/> <br />
                         </div>
 
                         <div className="info">
-                            <input placeholder="Confirm password" type="password" name="passwordConfBox" id="passwordConfBox" onChange={e => setConfPassword((md5(e.target.value)))}/> <br />
+                            <input placeholder="Confirm Password" type="password" name="passwordConfBox" id="passwordConfBox" onChange={e => setConfPassword((md5(e.target.value)))}/> <br />
                         </div>
 
                     <div className="buttons">

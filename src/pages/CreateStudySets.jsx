@@ -1,12 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const CreateStudySets = () =>{
     let username = localStorage.getItem('user')
+
+    const location = useLocation()
+    const courseId = location.pathname.split("/")[2];
+
     const [studyset,setStudySet]= useState({
         title: "",
-        uid: username
+        uid: username,
+        class_id: courseId
     })
 
     const navigate = useNavigate()
@@ -23,7 +28,7 @@ const CreateStudySets = () =>{
             let question = "UPDATE_CREATEDSETS"
             await axios.put("http://localhost:8081/accounts", {question, username, ss_id})  
             
-            navigate("/studysets")
+            navigate("/classes/"+courseId);
         }catch(err){
             console.log(err)
         }

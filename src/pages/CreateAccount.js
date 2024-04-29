@@ -84,26 +84,22 @@ const CreateAccount = () => {
 
         <form id="verifyForm">
           <div className="info">
-            <label>Enter Username</label>
-            <input type="text" name="username" onChange={(e) => setInputUser(e.target.value)}/><br></br>
+            <input type="text" name="username" placeholder="Enter Username" onChange={(e) => setInputUser(e.target.value)}/><br></br>
           </div>
           
           <div className="info">
-            <label>Enter Email</label>
-            <input type="email" name="user_email" onChange={(e) =>validateEmail(e)} /><br></br>
+            <input type="email" name="user_email" placeholder="Enter Email" onChange={(e) =>validateEmail(e)} /><br></br>
             <div style={{whiteSpace: 'break-spaces'}}>
               {emailMessage}
             </div>
           </div>
   
           <div className="info">
-            <label>Enter A Password</label>
-            <input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/> <br />
+            <input type="password" name="password" id="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)}/> <br />
           </div>
   
           <div className="info">
-            <label>Confirm Password</label>
-            <input type="password" name="passwordConf" id="passwordConf" value={matchPassword} onChange={(e) => setMatchPassword(e.target.value)}/> <br />
+            <input type="password" name="passwordConf" id="passwordConf" placeholder="Confirm Password" value={matchPassword} onChange={(e) => setMatchPassword(e.target.value)}/> <br />
           </div>
 
 

@@ -59,7 +59,6 @@ const SearchBar = () => {
                                     <div className="card" style={{ width: "200px", height: "250px" }}>
                                         <div className="card-body">
                                             <h5 className="card-title">{classList.title}</h5>
-                                            <p className="card-text">Class description or details here.</p>
                                             <Link to={`/classes/${classList.class_id}`} className="btn btn-primary">Go to Class</Link>
                                         </div>
                                     </div>
