@@ -97,6 +97,14 @@ app.get("/studysets/:ss_id", (req,res)=>{
     })
 })
 
+app.get("/studysets/by-class/:class_id", (req,res)=>{
+    const q = "SELECT class_id, `title` FROM studysets WHERE class_id = ?"
+    db.query(q,req.params.class_id,(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
 app.post("/studysets", (req,res)=>{
     const q = "INSERT INTO studysets (`title`) VALUES (?)"
     const value = req.body.title
@@ -175,6 +183,14 @@ app.delete("/studycards/:card_id", (req,res)=>{
     db.query(q,[cardId],(err,data)=>{
         if(err) return res.json(err)
         return res.json("Study card has been deleted")
+    })
+})
+
+app.get("/classes/:class_id", (req,res)=>{
+    const q = "SELECT class_id, `title` FROM classes WHERE class_id = ?"
+    db.query(q,req.params.class_id,(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
     })
 })
 

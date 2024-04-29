@@ -37,7 +37,7 @@ const SearchBar = () => {
         }).catch((error) => {
           console.error(error);
         });
-        const filtered = classList.filter(classLists => classLists.wvuClass.toLowerCase().includes(query.toLowerCase()));
+        const filtered = classList.filter(classLists => classLists.title.toLowerCase().includes(query.toLowerCase()));
         return filtered;
     };
 
@@ -59,12 +59,12 @@ const SearchBar = () => {
                     <div className="container">
                         <div className="row">
                             {searchResults.map(classList => (
-                                <div key={classList.wvuClass} className="col-6 col-md-4 col-lg-3 mb-4">
+                                <div key={classList.title} className="col-6 col-md-4 col-lg-3 mb-4">
                                     <div className="card" style={{ width: "200px", height: "250px" }}>
                                         <div className="card-body">
-                                            <h5 className="card-title">{classList.wvuClass}</h5>
+                                            <h5 className="card-title">{classList.title}</h5>
                                             <p className="card-text">Class description or details here.</p>
-                                            <Link to="/classes" className="btn btn-primary">Go to Class</Link>
+                                            <Link to={`/classes/${classList.class_id}`} className="btn btn-primary">Go to Class</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -78,3 +78,4 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+

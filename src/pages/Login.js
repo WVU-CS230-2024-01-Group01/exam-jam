@@ -39,21 +39,18 @@ function Login () {
                 <h2>Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div class="info">
-                        <label for="username">Enter A Username</label>
-                        <input type="text" name="usernameBox" id="usernameBox" onChange={e => setUsername(e.target.value)}/> <br />
+                        <input type="text" name="usernameBox" id="usernameBox" placeholder="Enter Username" onChange={e => setUsername(e.target.value)}/> <br />
                     </div>
                     <div class="info">
-                        <label for="password">Enter A Password</label>
-                        <input type="password" name="passwordBox" id="passwordBox" onChange={e => setPassword((md5(e.target.value)))}/> <br />
+                        <input type="password" name="passwordBox" id="passwordBox" placeholder="Enter Password" onChange={e => setPassword((md5(e.target.value)))}/> <br />
                     </div>
                     <div class="info">
-                        <label for="passwordConf">Confirm Password</label>
-                        <input type="password" name="passwordConfBox" id="passwordConfBox" onChange={e => setConfPassword((md5(e.target.value)))}/> <br />
+                        <input type="password" name="passwordConfBox" id="passwordConfBox" placeholder="Confirm Password" onChange={e => setConfPassword((md5(e.target.value)))}/> <br />
                     </div>
 
                     <div class="buttons">
                         <button type="submit">Login</button>
-                        <Link to="/accountcreation"><button type="submit">Create an account</button></Link>
+                        <Link to="/accountcreation"><button type="submit">Create Account</button></Link>
                     </div>
                     <Link to="/"><button class="homepageButton">Homepage</button></Link>
                     

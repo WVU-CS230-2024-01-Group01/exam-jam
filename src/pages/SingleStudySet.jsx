@@ -33,25 +33,6 @@ const SingleStudySet = () => {
         fetchStudyCards()
     },[setId])
 
-
-    // const handleDelete = async (setId) =>{
-    //     try{
-    //         await axios.delete(`http://localhost:8081/studysets/${setId}`)
-    //         navigate("/studysets")
-    //     }catch(err){
-    //         console.log(err)
-    //     }
-    // }
-
-    // const cardDelete = async (card_id) =>{
-    //     try{
-    //         await axios.delete(`http://localhost:8081/studycards/${card_id}`)
-    //         setStudyCards(studycards.filter(studycard => studycard.card_id!== card_id));
-    //     }catch(err){
-    //         console.log(err)
-    //     }
-    // }
-
     return( <div>
                 <div className= "studysets">
                     <div>

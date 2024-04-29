@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/logout" element={<Logout />} />
           <Route exact path="/verifyemail" element={<VerifyEmail />} />
           <Route exact path="*" element={<Navigate to="/" />} />
-          <Route exact path="/classes" element = {<Classes />} />
+          <Route exact path="/classes/:class_id" element = {<Classes />} />
         </Routes>
       </BrowserRouter>
 
