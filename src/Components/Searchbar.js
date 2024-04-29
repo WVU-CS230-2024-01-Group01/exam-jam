@@ -56,8 +56,8 @@ const SearchBar = () => {
                         <div className="row">
                             {searchResults.map(classList => (
                                 <div key={classList.title} className="col-6 col-md-4 col-lg-3 mb-4">
-                                    <div className="card" style={{ width: "200px", height: "250px" }}>
-                                        <div className="card-body">
+                                    <div className="card" style={{ width: "200px", height: "200px"}}>
+                                        <div className="card-body d-flex flex-column align-items-center justify-content-center">
                                             <h5 className="card-title">{classList.title}</h5>
                                             <Link to={`/classes/${classList.class_id}`} className="btn btn-primary">Go to Class</Link>
                                         </div>
