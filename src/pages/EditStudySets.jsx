@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import "./StudySetStyles.css";
 
 const EditStudySets = () => {
     const [studyset, setStudySet] = useState({});
