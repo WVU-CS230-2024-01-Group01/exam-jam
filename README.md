@@ -59,27 +59,18 @@ To install ExamJam, follow these steps:
 ### Creating Study Materials
 
 1. After clicking on a course's class page, click 'Create (material)'.
-2. Give your material and Title and hit 'Create'.
+2. Give your material a Title and hit 'Create'.
 3. Enter applicable information for future study material use.
 4. Created study material will appear in your Profile Page.
 
 ## Support
 
-For help and support, please contact us via email at examjam@gmail.com.
+For help and support, please contact us via email at examjamofficial@gmail.com.
 
 ## Roadmap
 
 - Implement real-time chat feature
 - Enhance user interface
-
-## Contributing
-
-We welcome contributions from the community! If you're interested in contributing to ExamJam, please follow these guidelines:
-- Fork the repository
-- Create your feature branch: `git checkout -b feature-name`
-- Commit your changes: `git commit -am 'Add new feature'`
-- Push to the branch: `git push origin feature-name`
-- Submit a pull request
 
 ## Links
 

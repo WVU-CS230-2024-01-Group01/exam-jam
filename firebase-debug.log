@@ -1,0 +1,59 @@
+[debug] [2024-04-24T19:42:23.906Z] ----------------------------------------------------------------------
+[debug] [2024-04-24T19:42:23.909Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mkgat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-04-24T19:42:23.910Z] CLI Version:   13.7.4
+[debug] [2024-04-24T19:42:23.910Z] Platform:      win32
+[debug] [2024-04-24T19:42:23.910Z] Node Version:  v20.11.1
+[debug] [2024-04-24T19:42:23.910Z] Time:          Wed Apr 24 2024 15:42:23 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-04-24T19:42:23.910Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-24T19:42:23.983Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-24T19:42:23.983Z] > authorizing via signed-in user (mbk00007@mix.wvu.edu)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\mkgat\exam-jam
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2024-04-24T19:42:45.145Z] ----------------------------------------------------------------------
+[debug] [2024-04-24T19:42:45.147Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mkgat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-04-24T19:42:45.148Z] CLI Version:   13.7.4
+[debug] [2024-04-24T19:42:45.148Z] Platform:      win32
+[debug] [2024-04-24T19:42:45.148Z] Node Version:  v20.11.1
+[debug] [2024-04-24T19:42:45.148Z] Time:          Wed Apr 24 2024 15:42:45 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-04-24T19:42:45.148Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-24T19:42:45.235Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-24T19:42:45.236Z] > authorizing via signed-in user (mbk00007@mix.wvu.edu)
+[debug] [2024-04-24T19:42:45.236Z] [iam] checking project examjam-firebase for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2024-04-24T19:42:45.238Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/examjam-firebase:testIamPermissions [none]
+[debug] [2024-04-24T19:42:45.238Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/examjam-firebase:testIamPermissions x-goog-quota-user=projects/examjam-firebase
+[debug] [2024-04-24T19:42:45.238Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/examjam-firebase:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2024-04-24T19:42:46.109Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/examjam-firebase:testIamPermissions 200
+[debug] [2024-04-24T19:42:46.109Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/examjam-firebase:testIamPermissions {}
+[debug] [2024-04-24T19:42:46.109Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project examjam-firebase:
+
+  firebase.projects.get
+  firebasedatabase.instances.update
+  firebasehosting.sites.update
+[debug] [2024-04-24T19:42:46.110Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase [none]
+[debug] [2024-04-24T19:42:46.418Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase 403
+[debug] [2024-04-24T19:42:46.418Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/examjam-firebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-04-24T19:42:46.420Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-04-24T19:42:46.423Z] FirebaseError: Failed to get Firebase project examjam-firebase. Please make sure the project exists and your account has permission to access it.
+    at getFirebaseProject (C:\Users\mkgat\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:308:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getDefaultDatabaseInstance (C:\Users\mkgat\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultDatabaseInstance.js:7:28)
+    at async requireDatabaseInstance (C:\Users\mkgat\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireDatabaseInstance.js:14:20)
+    at async Object.fn (C:\Users\mkgat\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:76:9)
+    at async C:\Users\mkgat\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:226:17
+[error] 
+[error] Error: Failed to get details for project: examjam-firebase.
