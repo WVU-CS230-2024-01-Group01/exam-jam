@@ -65,21 +65,12 @@ To install ExamJam, follow these steps:
 
 ## Support
 
-For help and support, please contact us via email at examjam@gmail.com.
+For help and support, please contact us via email at examjamofficial@gmail.com.
 
 ## Roadmap
 
 - Implement real-time chat feature
 - Enhance user interface
-
-## Contributing
-
-We welcome contributions from the community! If you're interested in contributing to ExamJam, please follow these guidelines:
-- Fork the repository
-- Create your feature branch: `git checkout -b feature-name`
-- Commit your changes: `git commit -am 'Add new feature'`
-- Push to the branch: `git push origin feature-name`
-- Submit a pull request
 
 ## Links
 
