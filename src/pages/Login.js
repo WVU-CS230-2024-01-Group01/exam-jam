@@ -24,7 +24,7 @@ function Login () {
             .then( res => {
                 if (res.data === "Login Successful") {
                     localStorage.setItem('user', username)
-                    navigate("/")
+                    navigate("/home")
                 }
                 else if (res.data === "Username or Password incorrect") {
                     alert("Username or Password incorrect")
@@ -42,7 +42,7 @@ function Login () {
         <div>
             <div className="Login">
                 <div className="form-box">
-                    <Link to="/"><button class="homepageButton"><img className="logo" src="/logoimage.jpeg" alt="ExamJam Logo" width="451.5px" length="164.25px" /></button></Link>
+                   <img className="logo" src="/logoimage.jpeg" alt="ExamJam Logo" width="451.5px" length="164.25px" />
                     <div className="toggle-buttons">
                 <button className={isProfessor ? "active" : ""} onClick={() => setIsProfessor(false)}>Student Login</button>
                 <button className={!isProfessor ? "active" : ""} onClick={() => setIsProfessor(true)}>Professor Login</button>

@@ -63,6 +63,8 @@ app.post("/accounts", (req, res) => {
 
 app.put("/accounts", (req, res) => { 
 
+    console.log(req.body.question)
+
     if (req.body.question === "UPDATE_PICTURE"){
         const q = "UPDATE accounts SET `picture` = ? WHERE `username` = ?"
 
@@ -79,6 +81,16 @@ app.put("/accounts", (req, res) => {
             if(err) return res.json(err)
             return res.json(data)
         })
+    }
+
+    else if (req.body.question === "DELETE_CREATEDSET") {
+        const ss_id = String(req.body.ss_id)    
+        const q = "UPDATE accounts SET created_sets = REPLACE(REPLACE(REPLACE(created_sets, ?, ''), ?, ''), ?, null) WHERE created_sets LIKE ?"
+
+        console.log(db.query(q, [ss_id + ',', ',' + ss_id, ss_id, '%' + ss_id + '%'], (err,data) => {
+            if(err) return res.json(err)
+            return res.json(data)
+        }))
     }
 
     else if (req.body.question === "UPDATE_FAVORITESETS") {
@@ -131,8 +143,9 @@ app.delete("/studysets/:ss_id", (req,res)=>{
 
     db.query(q,[setId],(err,data)=>{
         if(err) return res.json(err)
-        return res.json("Study set has been deleted")
+        return res.json(data)
     })
+
 })
 
 app.put("/studysets/:ss_id", (req,res)=>{
