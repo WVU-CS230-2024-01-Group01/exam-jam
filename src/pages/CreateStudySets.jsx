@@ -37,6 +37,13 @@ const CreateStudySets = () =>{
     }
 
     console.log(studyset)
+
+    const handleCancel = () => {
+        //navigating to previous page
+        navigate(-1);
+    };
+
+    
     return(
         <div className="Login">
     <div className="form-box">
@@ -48,7 +55,7 @@ const CreateStudySets = () =>{
             </div>
             <div className="buttons">
                 <button type="submit" className="createButton">Create</button>
-                <Link to="/studysets" className="styledButtons">Cancel</Link>
+                <button className="styledButtons" onClick={handleCancel}>Cancel</button>
             </div>
         </form>
     </div>
