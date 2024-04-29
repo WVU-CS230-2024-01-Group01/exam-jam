@@ -100,47 +100,47 @@ const EditStudySets = () => {
 
     return (
         <div className="form">
-            <h1>Edit Study Set</h1>
-            <div className="studyset" key={studyset.ss_id}>
-                <input
-                    type="text"
-                    value={studyset.title}
-                    placeholder="Title"
-                    onChange={(e)=>handleChange(e)}
-                    name="title"
-                />
-            </div>
-            <div>
-                <button className="formButton" onClick={addCard}>Add Card</button>
-                {studycards.map((studycard) => (
-                    <div className="studycard" key={studycard.card_id}>
-                        <input
-                            type="text"
-                            value={studycard.side1 || ""}
-                            placeholder="Side1"
-                            onChange={(e) => handleCardChange(e, studycard.card_id)}
-                            name="side1"
-                        />
-                        <input
-                            type="text"
-                            value={studycard.side2 || ""}
-                            placeholder="Side2"
-                            onChange={(e) => handleCardChange(e, studycard.card_id)}
-                            name="side2"
-                        />
-                        <button className="delete" onClick={() => cardDelete(studycard.card_id)}>
-                            Delete
-                        </button>
-                    </div>
-                ))}
-            </div>
-            <button className="formButton" onClick={handleClick}>
-                Confirm
-            </button>
-            <button className="formButton">
-                <Link to={`/studysets/${setId}`}>Go Back</Link>
-            </button>
-        </div>
+           <h1 className="styledButtons">Edit Study Set</h1>
+           <div className="studyset" key={studyset.ss_id}>
+               <input
+                   type="text"
+                   value={studyset.title}
+                   placeholder="Title"
+                   onChange={(e)=>handleChange(e)}
+                   name="title"
+               />
+           </div>
+           <div>
+               <button className="formButton" onClick={addCard}>Add Card</button>
+               {studycards.map((studycard) => (
+                   <div className="studycard" key={studycard.card_id}>
+                       <input
+                           type="text"
+                           value={studycard.side1 || ""}
+                           placeholder="Side1"
+                           onChange={(e) => handleCardChange(e, studycard.card_id)}
+                           name="side1"
+                       />
+                       <input
+                           type="text"
+                           value={studycard.side2 || ""}
+                           placeholder="Side2"
+                           onChange={(e) => handleCardChange(e, studycard.card_id)}
+                           name="side2"
+                       />
+                       <button className="styledButtons" onClick={() => cardDelete(studycard.card_id)}>
+                           Delete
+                       </button>
+                   </div>
+               ))}
+           </div>
+           <button className="styledButtons" onClick={handleClick}>
+               Confirm
+           </button>
+           <button className="styledButtons">
+               <Link to={`/studysets`}>Go Back</Link>
+           </button>
+       </div>
     );
 };
 
