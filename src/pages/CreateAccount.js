@@ -51,6 +51,12 @@ const CreateAccount = () => {
 
     let md5Password = md5(password)
 
+    // Check if the email is for a professor account
+  if (isProfessor && !inputEmail.endsWith("@mail.wvu.edu")) {
+    console.log("Professor accounts must have email addresses ending in @mail.wvu.edu");
+    return;
+  }
+  
     emailjs
       .send('service_oefue9b', 'template_mk9ed49', templateParams, {
         publicKey: 'RuQiTX_6jm9UlWhKw',
