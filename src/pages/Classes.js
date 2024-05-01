@@ -36,9 +36,8 @@ export const Classes = () => {
 
   const handleDelete = async (ss_id) =>{
     try{
-        let res = await axios.delete(`http://localhost:8081/studysets/${ss_id}`);
-        let question = "DELETE_CREATEDSET"
-        console.log(ss_id)
+        const res = await axios.delete(`http://localhost:8081/studysets/${ss_id}`);
+        const question = "DELETE_CREATEDSET"
         await axios.put("http://localhost:8081/accounts/", {question, ss_id}) 
         setStudySets(studysets.filter(set => set.ss_id !== ss_id));
     }catch(err){
@@ -63,7 +62,7 @@ return (
                     ))}
                 </div>
                 <div>
-                    <Link to="/"><button className="button-style">Homepage</button></Link>
+                    <Link to="/home"><button className="button-style">Homepage</button></Link>
                     <Link to="/profilepage"><button className="button-style">Edit Profile</button></Link>
                     <Link to="/logout"><button className="button-style">Logout</button></Link>      
                 </div>

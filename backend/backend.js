@@ -39,7 +39,7 @@ app.post("/accounts", (req, res) => {
     }
 
     else if (req.body.question === "LOGIN"){ // LOGIN
-        const q = "SELECT * FROM accounts WHERE username = ? AND password = ?"
+        const q = "SELECT * FROM accounts WHERE BINARY username = ? AND password = ?"
 
         db.query(q, [req.body.username, req.body.password], (err, data) => {
             if(err) return res.json("Login Unsuccessful")
