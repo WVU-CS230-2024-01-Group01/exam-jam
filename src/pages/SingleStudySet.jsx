@@ -44,16 +44,21 @@ const SingleStudySet = () => {
                 <div key={studyset.ss_id}>
                     <h1 className="study-set-title">{studyset.title}</h1>
                 </div>
-                ))}
-                
-                   
-               
+                ))}         
                
             </div>
-             <Link to={`/editstudysets/${studyset.ss_id}`}><button className="button-style">Edit</button></Link>
-             <Link to={`/classes/${studyset.class_id}`}><button className="button-style">Back to Class</button></Link>
+            { studyset[0] ? (
+                <>
+                    <Link to={`/editstudysets/${studyset[0].ss_id}`}><button className="button-style">Edit</button></Link>
+                    <Link to={`/classes/${studyset[0].class_id}`}><button className="button-style">Back to Class</button></Link>
+                </>
+            ) : (
+                <></>
+            )
+            }
+             
                 
-           <Link to="/"><button className="button-style">Homepage</button></Link>
+           <Link to="/home"><button className="button-style">Homepage</button></Link>
            <Link to="/profilepage"><button className="button-style">Edit Profile</button></Link>
            <Link to="/logout"><button className="button-style">Logout</button></Link>      
           </nav>
