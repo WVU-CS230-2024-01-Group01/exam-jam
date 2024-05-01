@@ -97,12 +97,13 @@
 
 .study-set-title {
   align-items: left;
-  color: black;
+  color: white;
   font-weight: bold; 
   padding: 6px; 
   border-radius: 10px; 
   display: flexbox; 
   font-size: 33px;
+ 
 }
 
 /* Aligns study cards in a grid - side by side  */
